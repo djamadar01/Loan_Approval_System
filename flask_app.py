@@ -117,9 +117,9 @@ def get_statistics():
             'approval_rate': 0
         })
 
-    approved = sum(1 for r in results_history if r['decision'] == 'approved')
-    rejected = sum(1 for r in results_history if r['decision'] == 'rejected')
-    review = sum(1 for r in results_history if r['decision'] == 'manual_review')
+    approved = sum(1 for r in results_history if r['decision'].lower() == 'approved')
+    rejected = sum(1 for r in results_history if r['decision'].lower() == 'rejected')
+    review = sum(1 for r in results_history if r['decision'].lower() == 'manual_review')
 
     return jsonify({
         'total': len(results_history),
