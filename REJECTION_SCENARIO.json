@@ -1,0 +1,50 @@
+{
+  "scenario": "LOAN REJECTION",
+  "description": "Customer details designed to trigger loan rejection",
+  "applicant_details": {
+    "applicant_id": "APP_REJECT_001",
+    "name": "James Smith",
+    "age": 25,
+    "employment_status": "unemployed",
+    "employment_years": 0,
+    "education_level": "high_school",
+    "credit_score": 350,
+    "existing_loans": 5
+  },
+  "financial_details": {
+    "annual_income": 18000,
+    "monthly_expenses": 2500,
+    "savings": 500,
+    "total_liabilities": 30000,
+    "loan_amount": 10000,
+    "loan_term_months": 60
+  },
+  "risk_factors": {
+    "credit_score_risk": "CRITICAL - Score 350 (needs >750)",
+    "employment_risk": "CRITICAL - Unemployed with 0 years history",
+    "age_risk": "HIGH - Age 25 (optimal 30-50)",
+    "education_risk": "MEDIUM - High school only",
+    "dti_ratio": "CRITICAL - 1.67 (needs <0.3)",
+    "savings_risk": "CRITICAL - Only $500 (needs 3-12 months expenses)"
+  },
+  "expected_outcome": {
+    "decision": "REJECTED",
+    "decision_score": 2.0,
+    "approval_probability": 0.05,
+    "reason": "Loan application does not meet minimum approval criteria"
+  },
+  "json_for_api": {
+    "applicant_id": "APP_REJECT_001",
+    "name": "James Smith",
+    "age": 25,
+    "employment_status": "unemployed",
+    "employment_years": 0,
+    "credit_score": 350,
+    "education_level": "high_school",
+    "annual_income": 18000,
+    "monthly_expenses": 2500,
+    "savings": 500,
+    "total_liabilities": 30000,
+    "existing_loans": 5
+  }
+}
