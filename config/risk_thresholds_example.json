@@ -1,0 +1,12 @@
+{
+  "credit_score_minimum": 620,
+  "debt_to_income_maximum": 43.0,
+  "employment_years_minimum": 2.0,
+  "savings_to_loan_ratio": 0.10,
+  "risk_score_low_threshold": 30.0,
+  "risk_score_medium_threshold": 50.0,
+  "risk_score_high_threshold": 70.0,
+  "approval_threshold_low": 0.85,
+  "approval_threshold_medium": 0.75,
+  "approval_threshold_high": 0.65
+}

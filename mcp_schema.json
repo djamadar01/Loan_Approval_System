@@ -1,0 +1,531 @@
+{
+  "server_info": {
+    "name": "RiskRulesDB",
+    "version": "1.0.0",
+    "description": "Financial Risk Analysis Engine MCP Server with Business Rules Engine",
+    "author": "Risk Analysis Systems",
+    "homepage": "https://github.com/anthropics/fastmcp-examples"
+  },
+  "capabilities": {
+    "tools": 3,
+    "batch_processing": true,
+    "caching": false,
+    "authentication": "none"
+  },
+  "tools": [
+    {
+      "name": "analyze_financial_risk",
+      "description": "Comprehensive financial risk analysis for a single borrower including DTI ratio, credit score risk, loan amount risk assessment, and anomaly detection",
+      "category": "analysis",
+      "primary": true,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "borrower_name": {
+            "type": "string",
+            "description": "Full name of the borrower",
+            "examples": ["John Smith", "Alice Johnson"]
+          },
+          "monthly_income": {
+            "type": "number",
+            "description": "Monthly gross income in USD",
+            "minimum": 0,
+            "examples": [8000, 12000]
+          },
+          "total_monthly_debt": {
+            "type": "number",
+            "description": "Total monthly debt obligations including mortgage, car loans, credit cards, etc.",
+            "minimum": 0,
+            "examples": [2400, 1500]
+          },
+          "credit_score": {
+            "type": "integer",
+            "description": "Credit score on standard scale (FICO or similar)",
+            "minimum": 300,
+            "maximum": 850,
+            "examples": [720, 650]
+          },
+          "loan_amount": {
+            "type": "number",
+            "description": "Requested loan amount in USD",
+            "minimum": 0,
+            "examples": [250000, 500000]
+          },
+          "annual_income": {
+            "type": "number",
+            "description": "Annual gross income in USD",
+            "minimum": 0,
+            "examples": [96000, 120000]
+          }
+        },
+        "required": [
+          "borrower_name",
+          "monthly_income",
+          "total_monthly_debt",
+          "credit_score",
+          "loan_amount",
+          "annual_income"
+        ],
+        "additionalProperties": false
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "borrower_name": {
+            "type": "string",
+            "description": "Name of analyzed borrower"
+          },
+          "analysis_timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO 8601 timestamp of analysis"
+          },
+          "debt_to_income": {
+            "type": "object",
+            "properties": {
+              "total_monthly_debt": {
+                "type": "number",
+                "description": "Total monthly debt"
+              },
+              "monthly_income": {
+                "type": "number",
+                "description": "Monthly income"
+              },
+              "ratio": {
+                "type": "number",
+                "description": "DTI ratio as decimal (0.30 = 30%)"
+              },
+              "risk_level": {
+                "type": "string",
+                "enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"]
+              },
+              "recommendation": {
+                "type": "string",
+                "description": "DTI-specific recommendation"
+              }
+            }
+          },
+          "credit_risk": {
+            "type": "object",
+            "properties": {
+              "credit_score": {
+                "type": "integer"
+              },
+              "risk_category": {
+                "type": "string",
+                "enum": ["EXCELLENT", "GOOD", "FAIR", "POOR"]
+              },
+              "risk_level": {
+                "type": "string",
+                "enum": ["LOW", "MEDIUM", "HIGH"]
+              },
+              "factors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Contributing factors to credit risk"
+              }
+            }
+          },
+          "loan_risk": {
+            "type": "object",
+            "properties": {
+              "loan_amount": {
+                "type": "number"
+              },
+              "borrower_income": {
+                "type": "number"
+              },
+              "ltv_ratio": {
+                "type": "number",
+                "description": "Loan-to-income ratio (loan/annual income)"
+              },
+              "risk_level": {
+                "type": "string",
+                "enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"]
+              },
+              "max_recommended_loan": {
+                "type": "number",
+                "description": "Maximum recommended loan based on income"
+              },
+              "factors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "anomaly_detection": {
+            "type": "object",
+            "properties": {
+              "flags": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "List of detected anomalies or red flags"
+              },
+              "anomaly_score": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "Normalized anomaly score (0=none, 1=maximum)"
+              },
+              "has_anomalies": {
+                "type": "boolean"
+              }
+            }
+          },
+          "overall_risk_level": {
+            "type": "string",
+            "enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"]
+          },
+          "overall_recommendation": {
+            "type": "string",
+            "description": "Final lending decision recommendation"
+          }
+        }
+      }
+    },
+    {
+      "name": "get_risk_rules_configuration",
+      "description": "Retrieve the current business rules configuration including all thresholds and parameters used for risk assessment",
+      "category": "configuration",
+      "primary": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "dti_rules": {
+            "type": "object",
+            "properties": {
+              "acceptable_max": {
+                "type": "number",
+                "description": "Maximum acceptable DTI ratio for LOW risk"
+              },
+              "acceptable_target": {
+                "type": "number",
+                "description": "Target DTI ratio for healthy finances"
+              },
+              "warning_threshold": {
+                "type": "number",
+                "description": "DTI threshold for warning/HIGH risk"
+              },
+              "critical_threshold": {
+                "type": "number",
+                "description": "DTI threshold for critical risk"
+              }
+            }
+          },
+          "credit_score_rules": {
+            "type": "object",
+            "properties": {
+              "excellent_min": {
+                "type": "integer",
+                "description": "Minimum score for excellent category"
+              },
+              "good_min": {
+                "type": "integer"
+              },
+              "fair_min": {
+                "type": "integer"
+              },
+              "poor_max": {
+                "type": "integer"
+              }
+            }
+          },
+          "loan_amount_rules": {
+            "type": "object",
+            "properties": {
+              "conservative_ratio": {
+                "type": "number",
+                "description": "Conservative loan-to-income multiplier"
+              },
+              "moderate_ratio": {
+                "type": "number"
+              },
+              "aggressive_ratio": {
+                "type": "number"
+              }
+            }
+          },
+          "anomaly_detection_rules": {
+            "type": "object",
+            "properties": {
+              "high_dti_threshold": {
+                "type": "number"
+              },
+              "low_credit_threshold": {
+                "type": "integer"
+              },
+              "high_loan_to_income": {
+                "type": "number"
+              },
+              "debt_to_income_variance": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "batch_analyze_financial_risk",
+      "description": "Analyze financial risk for multiple borrowers in a single batch request with summary statistics",
+      "category": "analysis",
+      "primary": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "borrowers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "borrower_name": {
+                  "type": "string"
+                },
+                "monthly_income": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "total_monthly_debt": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "credit_score": {
+                  "type": "integer",
+                  "minimum": 300,
+                  "maximum": 850
+                },
+                "loan_amount": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "annual_income": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "borrower_name",
+                "monthly_income",
+                "total_monthly_debt",
+                "credit_score",
+                "loan_amount",
+                "annual_income"
+              ]
+            },
+            "description": "Array of borrowers to analyze",
+            "minItems": 1
+          }
+        },
+        "required": ["borrowers"],
+        "additionalProperties": false
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "batch_timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "total_borrowers": {
+            "type": "integer"
+          },
+          "analyses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "description": "Individual analysis results (same structure as analyze_financial_risk output)"
+            }
+          },
+          "summary": {
+            "type": "object",
+            "properties": {
+              "low_risk_count": {
+                "type": "integer"
+              },
+              "medium_risk_count": {
+                "type": "integer"
+              },
+              "high_risk_count": {
+                "type": "integer"
+              },
+              "critical_risk_count": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "business_rules": {
+    "dti_thresholds": {
+      "LOW": {
+        "max": 0.43,
+        "description": "Debt-to-income ratio within standard lending guidelines"
+      },
+      "MEDIUM": {
+        "min": 0.43,
+        "max": 0.50,
+        "description": "DTI elevated, monitoring recommended"
+      },
+      "HIGH": {
+        "min": 0.50,
+        "max": 0.60,
+        "description": "DTI high, debt reduction recommended"
+      },
+      "CRITICAL": {
+        "min": 0.60,
+        "description": "DTI critical, immediate action required"
+      }
+    },
+    "credit_score_ranges": {
+      "EXCELLENT": {
+        "min": 750,
+        "risk_level": "LOW"
+      },
+      "GOOD": {
+        "min": 670,
+        "max": 749,
+        "risk_level": "LOW"
+      },
+      "FAIR": {
+        "min": 580,
+        "max": 669,
+        "risk_level": "MEDIUM"
+      },
+      "POOR": {
+        "max": 579,
+        "risk_level": "HIGH"
+      }
+    },
+    "loan_to_income_ratios": {
+      "CONSERVATIVE": {
+        "max": 2.5,
+        "risk_level": "LOW"
+      },
+      "MODERATE": {
+        "min": 2.5,
+        "max": 3.0,
+        "risk_level": "MEDIUM"
+      },
+      "AGGRESSIVE": {
+        "min": 3.0,
+        "max": 3.5,
+        "risk_level": "HIGH"
+      },
+      "EXCESSIVE": {
+        "min": 3.5,
+        "risk_level": "CRITICAL"
+      }
+    }
+  },
+  "recommendations_by_risk_level": {
+    "LOW": {
+      "action": "APPROVE",
+      "text": "Low risk profile. Standard terms recommended."
+    },
+    "MEDIUM": {
+      "action": "APPROVE_WITH_CONDITIONS",
+      "text": "Moderate risk. Standard terms may apply with monitoring."
+    },
+    "HIGH": {
+      "action": "CONDITIONAL_APPROVAL",
+      "text": "High risk. Approve only with additional conditions or co-signer."
+    },
+    "CRITICAL": {
+      "action": "REJECT",
+      "text": "Critical risk factors present. Do not approve without major changes."
+    }
+  },
+  "error_handling": {
+    "validation_errors": {
+      "invalid_income": "Monthly income must be positive",
+      "invalid_credit_score": "Credit score must be between 300 and 850",
+      "invalid_debt": "Debt must be non-negative",
+      "invalid_loan": "Loan amount must be non-negative"
+    },
+    "response_format": {
+      "success": {
+        "type": "object",
+        "contains": "analysis data"
+      },
+      "error": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["failed"]
+          }
+        }
+      }
+    }
+  },
+  "performance": {
+    "single_analysis_ms": "< 10",
+    "batch_100_borrowers_ms": "< 100",
+    "memory_footprint": "minimal",
+    "external_dependencies": "none"
+  },
+  "security": {
+    "authentication": "none_required",
+    "note": "Should be deployed behind authentication layer in production",
+    "data_retention": "stateless",
+    "audit_logging": "enabled"
+  },
+  "deployment_options": [
+    "Subprocess via MCP protocol",
+    "Docker container",
+    "AWS Lambda",
+    "Google Cloud Run",
+    "Azure Container Instances"
+  ],
+  "examples": {
+    "low_risk_approval": {
+      "input": {
+        "borrower_name": "Alice Johnson",
+        "monthly_income": 10000,
+        "total_monthly_debt": 1500,
+        "credit_score": 800,
+        "loan_amount": 200000,
+        "annual_income": 120000
+      },
+      "expected_outcome": "APPROVE"
+    },
+    "high_risk_rejection": {
+      "input": {
+        "borrower_name": "Bob Williams",
+        "monthly_income": 4000,
+        "total_monthly_debt": 2200,
+        "credit_score": 550,
+        "loan_amount": 400000,
+        "annual_income": 48000
+      },
+      "expected_outcome": "REJECT"
+    },
+    "moderate_risk_conditions": {
+      "input": {
+        "borrower_name": "Carol Davis",
+        "monthly_income": 7000,
+        "total_monthly_debt": 1400,
+        "credit_score": 680,
+        "loan_amount": 300000,
+        "annual_income": 84000
+      },
+      "expected_outcome": "APPROVE_WITH_CONDITIONS"
+    }
+  }
+}

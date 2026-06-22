@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  # FastAPI Backend Service
+  fastapi:
+    build:
+      context: .
+      dockerfile: Dockerfile.fastapi
+    container_name: loan_fastapi_backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./test.db
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./:/app
+    command: uvicorn api.loan_application_api:app --host 0.0.0.0 --port 8000 --reload
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - loan_network
+
+  # Streamlit Frontend Service
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile.streamlit
+    container_name: loan_streamlit_frontend
+    ports:
+      - "8501:8501"
+    environment:
+      - API_BASE_URL=http://fastapi:8000
+      - STREAMLIT_SERVER_HEADLESS=true
+    depends_on:
+      - fastapi
+    volumes:
+      - ./app.py:/app/app.py
+    command: streamlit run app.py --server.port=8501 --server.address=0.0.0.0
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - loan_network
+
+networks:
+  loan_network:
+    driver: bridge
+
+volumes:
+  fastapi_data:
+  streamlit_data:

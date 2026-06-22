@@ -1,0 +1,213 @@
+{
+  "name": "DecisionSynthesis MCP Server",
+  "version": "1.0.0",
+  "description": "MCP server for decision synthesis based on risk scores with configurable decision logic rules",
+  "author": "DecisionSynthesis Team",
+  "tools": [
+    {
+      "name": "synthesize_decision",
+      "description": "Synthesize a decision based on risk scores and decision logic rules",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "financial_risk": {
+            "type": "number",
+            "description": "Financial risk score (0-100)",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "operational_risk": {
+            "type": "number",
+            "description": "Operational risk score (0-100)",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "compliance_risk": {
+            "type": "number",
+            "description": "Compliance risk score (0-100)",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "reputational_risk": {
+            "type": "number",
+            "description": "Reputational risk score (0-100)",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "has_critical_issues": {
+            "type": "boolean",
+            "description": "Whether critical issues have been identified",
+            "default": false
+          },
+          "has_mitigating_factors": {
+            "type": "boolean",
+            "description": "Whether mitigating factors are present",
+            "default": false
+          },
+          "requires_escalation": {
+            "type": "boolean",
+            "description": "Whether the decision requires escalation",
+            "default": false
+          }
+        },
+        "required": [
+          "financial_risk",
+          "operational_risk",
+          "compliance_risk",
+          "reputational_risk"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "classification": {
+            "type": "string",
+            "enum": ["Approve", "Reject", "Review"],
+            "description": "Decision classification"
+          },
+          "risk_score": {
+            "type": "integer",
+            "description": "Overall risk score (0-100)",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "confidence_level": {
+            "type": "number",
+            "description": "Confidence level (0.0-1.0)",
+            "minimum": 0.0,
+            "maximum": 1.0
+          },
+          "key_decision_factors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of key decision factors"
+          },
+          "explanation": {
+            "type": "string",
+            "description": "Detailed explanation of the decision"
+          }
+        },
+        "required": [
+          "classification",
+          "risk_score",
+          "confidence_level",
+          "key_decision_factors",
+          "explanation"
+        ]
+      }
+    },
+    {
+      "name": "get_decision_rules",
+      "description": "Retrieve the complete decision rule set and logic",
+      "input_schema": {
+        "type": "object",
+        "properties": {}
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "risk_score_calculation": {
+            "type": "object",
+            "description": "Risk score calculation methodology"
+          },
+          "classification_rules": {
+            "type": "object",
+            "description": "Classification rules for each decision type"
+          },
+          "thresholds": {
+            "type": "object",
+            "description": "Risk thresholds and ranges"
+          }
+        }
+      }
+    }
+  ],
+  "decision_rules": {
+    "version": "1.0",
+    "last_updated": "2024-06-18",
+    "risk_score_calculation": {
+      "formula": "weighted_average",
+      "weights": {
+        "financial_risk": 0.35,
+        "operational_risk": 0.25,
+        "compliance_risk": 0.25,
+        "reputational_risk": 0.15
+      },
+      "range": "0-100",
+      "description": "Calculates overall risk as weighted average of component risks"
+    },
+    "classification_thresholds": {
+      "approve": {
+        "risk_score_max": 49,
+        "critical_issues": false,
+        "escalation_required": false,
+        "confidence_min": 0.9,
+        "confidence_max": 0.95
+      },
+      "review": {
+        "risk_score_min": 50,
+        "risk_score_max": 84,
+        "confidence_min": 0.7,
+        "confidence_max": 0.85
+      },
+      "reject": {
+        "risk_score_min": 85,
+        "unmitigable_critical_issues": true,
+        "confidence_min": 0.9,
+        "confidence_max": 0.95
+      }
+    },
+    "decision_logic": [
+      {
+        "order": 1,
+        "condition": "Risk Score >= 85 AND Critical Issues AND NOT Mitigating Factors",
+        "action": "REJECT",
+        "confidence": 0.95,
+        "rationale": "High-risk with unmitigable critical issues"
+      },
+      {
+        "order": 2,
+        "condition": "Risk Score 50-84 AND (Critical Issues OR Requires Escalation)",
+        "action": "REVIEW",
+        "confidence": 0.75,
+        "rationale": "Medium-high risk requiring human judgment"
+      },
+      {
+        "order": 3,
+        "condition": "Risk Score < 50 AND NOT Critical Issues",
+        "action": "APPROVE",
+        "confidence": 0.95,
+        "rationale": "Low risk with no unmitigable issues"
+      },
+      {
+        "order": 4,
+        "condition": "Default or Mixed Profile",
+        "action": "REVIEW",
+        "confidence": 0.7,
+        "rationale": "Conservative default for uncertain cases"
+      }
+    ]
+  },
+  "supported_features": [
+    "Weighted risk score calculation",
+    "Multi-factor decision analysis",
+    "Confidence scoring",
+    "Decision factor extraction",
+    "Detailed explanation generation",
+    "Rule-based classification",
+    "Threshold-based escalation",
+    "Mitigation factor consideration"
+  ],
+  "use_cases": [
+    "Loan approval decisions",
+    "Credit risk assessment",
+    "Compliance review automation",
+    "Transaction risk evaluation",
+    "Vendor onboarding decisions",
+    "Insurance underwriting",
+    "Regulatory decision support",
+    "Business deal evaluation"
+  ]
+}

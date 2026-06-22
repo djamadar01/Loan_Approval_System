@@ -1,0 +1,61 @@
+job_id,task_data,status,result,error,start_time,end_time,retry_count,duration_seconds,metadata
+job_000001,"{'id': 0, 'value': '0', 'category': 'A'}",completed,"{'id': 0, 'original_value': '0', 'transformed_value': 0, 'category': 'A', 'transformed_at': '2026-06-20T14:21:18.044475'}",,2026-06-20T14:21:18.044460,2026-06-20T14:21:18.044582,0,0.000122,{}
+job_000002,"{'id': 1, 'value': '10', 'category': 'B'}",completed,"{'id': 1, 'original_value': '10', 'transformed_value': 20, 'category': 'B', 'transformed_at': '2026-06-20T14:21:18.044610'}",,2026-06-20T14:21:18.044602,2026-06-20T14:21:18.044704,0,0.000102,{}
+job_000003,"{'id': 2, 'value': '20', 'category': 'C'}",completed,"{'id': 2, 'original_value': '20', 'transformed_value': 40, 'category': 'C', 'transformed_at': '2026-06-20T14:21:18.044727'}",,2026-06-20T14:21:18.044721,2026-06-20T14:21:18.046948,0,0.002227,{}
+job_000004,"{'id': 3, 'value': '30', 'category': 'A'}",completed,"{'id': 3, 'original_value': '30', 'transformed_value': 60, 'category': 'A', 'transformed_at': '2026-06-20T14:21:18.046985'}",,2026-06-20T14:21:18.046975,2026-06-20T14:21:18.047089,0,0.000114,{}
+job_000005,"{'id': 4, 'value': '40', 'category': 'B'}",completed,"{'id': 4, 'original_value': '40', 'transformed_value': 80, 'category': 'B', 'transformed_at': '2026-06-20T14:21:18.047109'}",,2026-06-20T14:21:18.047103,2026-06-20T14:21:18.047618,0,0.000515,{}
+job_000007,"{'id': 6, 'value': '60', 'category': 'A'}",completed,"{'id': 6, 'original_value': '60', 'transformed_value': 120, 'category': 'A', 'transformed_at': '2026-06-20T14:21:18.050042'}",,2026-06-20T14:21:18.050029,2026-06-20T14:21:18.050165,0,0.000136,{}
+job_000008,"{'id': 7, 'value': '70', 'category': 'B'}",completed,"{'id': 7, 'original_value': '70', 'transformed_value': 140, 'category': 'B', 'transformed_at': '2026-06-20T14:21:18.050189'}",,2026-06-20T14:21:18.050184,2026-06-20T14:21:18.050268,0,8.4e-05,{}
+job_000010,"{'id': 9, 'value': '90', 'category': 'A'}",completed,"{'id': 9, 'original_value': '90', 'transformed_value': 180, 'category': 'A', 'transformed_at': '2026-06-20T14:21:18.051021'}",,2026-06-20T14:21:18.051012,2026-06-20T14:21:18.051501,0,0.000489,{}
+job_000011,"{'id': 10, 'value': '100', 'category': 'B'}",completed,"{'id': 10, 'original_value': '100', 'transformed_value': 200, 'category': 'B', 'transformed_at': '2026-06-20T14:21:18.051529'}",,2026-06-20T14:21:18.051522,2026-06-20T14:21:18.051613,0,9.1e-05,{}
+job_000012,"{'id': 11, 'value': '110', 'category': 'C'}",completed,"{'id': 11, 'original_value': '110', 'transformed_value': 220, 'category': 'C', 'transformed_at': '2026-06-20T14:21:18.051634'}",,2026-06-20T14:21:18.051629,2026-06-20T14:21:18.051701,0,7.2e-05,{}
+job_000006,"{'id': 5, 'value': '50', 'category': 'C'}",completed,"{'id': 5, 'original_value': '50', 'transformed_value': 100, 'category': 'C', 'transformed_at': '2026-06-20T14:21:19.061609'}","Traceback (most recent call last):
+  File ""/home/ubuntu/Desktop/demo/batch_processor.py"", line 384, in _execute_job
+    job.result = func(job.task_data)
+                 ^^^^^^^^^^^^^^^^^^^
+  File ""/home/ubuntu/Desktop/demo/batch_examples.py"", line 104, in transform_record
+    raise ConnectionError(""Transient network error"")
+ConnectionError: Transient network error
+",2026-06-20T14:21:19.061599,2026-06-20T14:21:19.062120,1,0.000521,{}
+job_000014,"{'id': 13, 'value': '130', 'category': 'B'}",completed,"{'id': 13, 'original_value': '130', 'transformed_value': 260, 'category': 'B', 'transformed_at': '2026-06-20T14:21:19.050719'}",,2026-06-20T14:21:19.050708,2026-06-20T14:21:19.050926,0,0.000218,{}
+job_000015,"{'id': 14, 'value': '140', 'category': 'C'}",completed,"{'id': 14, 'original_value': '140', 'transformed_value': 280, 'category': 'C', 'transformed_at': '2026-06-20T14:21:19.050948'}",,2026-06-20T14:21:19.050942,2026-06-20T14:21:19.051029,0,8.7e-05,{}
+job_000013,"{'id': 12, 'value': '120', 'category': 'A'}",completed,"{'id': 12, 'original_value': '120', 'transformed_value': 240, 'category': 'A', 'transformed_at': '2026-06-20T14:21:19.062160'}","Traceback (most recent call last):
+  File ""/home/ubuntu/Desktop/demo/batch_processor.py"", line 384, in _execute_job
+    job.result = func(job.task_data)
+                 ^^^^^^^^^^^^^^^^^^^
+  File ""/home/ubuntu/Desktop/demo/batch_examples.py"", line 104, in transform_record
+    raise ConnectionError(""Transient network error"")
+ConnectionError: Transient network error
+",2026-06-20T14:21:19.062151,2026-06-20T14:21:19.062238,1,8.7e-05,{}
+job_000009,"{'id': 8, 'value': '80', 'category': 'C'}",completed,"{'id': 8, 'original_value': '80', 'transformed_value': 160, 'category': 'C', 'transformed_at': '2026-06-20T14:21:19.062256'}","Traceback (most recent call last):
+  File ""/home/ubuntu/Desktop/demo/batch_processor.py"", line 384, in _execute_job
+    job.result = func(job.task_data)
+                 ^^^^^^^^^^^^^^^^^^^
+  File ""/home/ubuntu/Desktop/demo/batch_examples.py"", line 104, in transform_record
+    raise ConnectionError(""Transient network error"")
+ConnectionError: Transient network error
+",2026-06-20T14:21:19.062252,2026-06-20T14:21:19.062319,1,6.7e-05,{}
+job_000016,"{'id': 99, 'value': 'invalid'}",failed,,"Traceback (most recent call last):
+  File ""/home/ubuntu/Desktop/demo/batch_processor.py"", line 384, in _execute_job
+    job.result = func(job.task_data)
+                 ^^^^^^^^^^^^^^^^^^^
+  File ""/home/ubuntu/Desktop/demo/batch_examples.py"", line 104, in transform_record
+    raise ConnectionError(""Transient network error"")
+ConnectionError: Transient network error
+",2026-06-20T14:21:23.816408,2026-06-20T14:21:23.816899,3,0.000491,{}
+job_000017,"{'id': 100, 'value': None}",failed,,"Traceback (most recent call last):
+  File ""/home/ubuntu/Desktop/demo/batch_examples.py"", line 110, in transform_record
+    ""transformed_value"": int(record[""value""]) * 2,
+                         ^^^^^^^^^^^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""/home/ubuntu/Desktop/demo/batch_processor.py"", line 384, in _execute_job
+    job.result = func(job.task_data)
+                 ^^^^^^^^^^^^^^^^^^^
+  File ""/home/ubuntu/Desktop/demo/batch_examples.py"", line 115, in transform_record
+    raise RuntimeError(f""Invalid record format: {str(e)}"")
+RuntimeError: Invalid record format: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+",2026-06-20T14:21:23.818898,2026-06-20T14:21:23.819420,3,0.000522,{}

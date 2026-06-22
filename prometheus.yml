@@ -1,0 +1,78 @@
+# Prometheus Configuration for Monitoring Flask App
+# Place this file in /etc/prometheus/ or your Prometheus config directory
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    monitor: 'flask-app-monitor'
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          # - 'alertmanager:9093'
+
+# Load rules once and periodically evaluate them
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+# Scrape configurations
+scrape_configs:
+  # Prometheus itself
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # Flask application metrics
+  - job_name: 'flask-app'
+    static_configs:
+      - targets: ['localhost:5000']
+    metrics_path: '/metrics'
+    scrape_interval: 15s
+    scrape_timeout: 10s
+
+  # Node exporter (if running)
+  # - job_name: 'node'
+  #   static_configs:
+  #     - targets: ['localhost:9100']
+
+# Alert rules (optional)
+# rules:
+#   - alert: HighErrorRate
+#     expr: rate(errors_total[5m]) > 0.05
+#     for: 5m
+#     labels:
+#       severity: critical
+#     annotations:
+#       summary: "High error rate detected"
+#       description: "Error rate is {{ $value }} errors/sec"
+#
+#   - alert: HighResponseTime
+#     expr: histogram_quantile(0.95, request_duration_seconds_bucket) > 1
+#     for: 5m
+#     labels:
+#       severity: warning
+#     annotations:
+#       summary: "High response time detected"
+#       description: "95th percentile response time is {{ $value }}s"
+#
+#   - alert: HighCPUUsage
+#     expr: cpu_usage_percent > 80
+#     for: 5m
+#     labels:
+#       severity: warning
+#     annotations:
+#       summary: "High CPU usage"
+#       description: "CPU usage is {{ $value }}%"
+#
+#   - alert: LowDiskSpace
+#     expr: disk_usage_percent > 85
+#     for: 5m
+#     labels:
+#       severity: critical
+#     annotations:
+#       summary: "Low disk space"
+#       description: "Disk usage is {{ $value }}%"

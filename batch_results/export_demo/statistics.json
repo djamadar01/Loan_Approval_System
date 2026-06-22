@@ -1,0 +1,22 @@
+{
+  "progress": {
+    "total_jobs": 100,
+    "completed_jobs": 100,
+    "failed_jobs": 0,
+    "skipped_jobs": 0,
+    "pending_jobs": 0,
+    "running_jobs": 0,
+    "total_retries": 0,
+    "completion_percentage": 100.0,
+    "success_rate": 100.0,
+    "elapsed_time_seconds": 4.047838,
+    "estimated_time_remaining_seconds": 0.0
+  },
+  "total_duration_seconds": 4.047858,
+  "average_job_duration_seconds": 0.012813650000000001,
+  "min_job_duration_seconds": 0.010165,
+  "max_job_duration_seconds": 0.024492,
+  "jobs_by_status": {
+    "completed": 100
+  }
+}

@@ -1,0 +1,168 @@
+INFO:__main__:
+
+INFO:__main__:╔══════════════════════════════════════════════════════════╗
+INFO:__main__:║          LOAN ORCHESTRATOR EXAMPLES                       ║
+INFO:__main__:╚══════════════════════════════════════════════════════════╝
+INFO:__main__:============================================================
+INFO:__main__:EXAMPLE 1: Basic Single Application Processing
+INFO:__main__:============================================================
+INFO:__main__:Processing application for John Smith
+INFO:loan_orchestrator:Executing application APP001 through orchestrator
+INFO:loan_orchestrator:Validating input for application APP001
+INFO:loan_orchestrator:Running profile analysis for APP001
+INFO:loan_orchestrator:Analyzing profile for applicant APP001
+INFO:loan_orchestrator:Profile analysis complete: APP001 - Risk Score: 12.50
+INFO:loan_orchestrator:Running financial risk assessment for APP001
+INFO:loan_orchestrator:Assessing financial risk for applicant APP001
+INFO:loan_orchestrator:Financial risk assessment complete: APP001 - Risk Score: 10.00
+INFO:loan_orchestrator:Aggregating risk assessment for APP001
+INFO:loan_orchestrator:Making loan decision for APP001
+INFO:loan_orchestrator:Making loan decision for applicant APP001
+INFO:loan_orchestrator:Loan decision made: APP001 - Decision: approved, Score: 92.25
+INFO:loan_orchestrator:Performing compliance checks for APP001
+INFO:loan_orchestrator:Performing compliance checks for applicant APP001
+INFO:loan_orchestrator:Compliance check complete: APP001 - Compliant: True, Flags: 0, Actions: 4
+INFO:__main__:Final Status: approved
+INFO:__main__:Decision: approved
+INFO:__main__:Decision Score: 92.25
+INFO:__main__:Approval Probability: 0.95
+INFO:__main__:
+============================================================
+INFO:__main__:EXAMPLE 2: Batch Processing Multiple Applications
+INFO:__main__:============================================================
+INFO:__main__:Processing APP_EXCELLENT: Sarah Johnson
+INFO:loan_orchestrator:Executing application APP_EXCELLENT through orchestrator
+INFO:loan_orchestrator:Validating input for application APP_EXCELLENT
+INFO:loan_orchestrator:Running profile analysis for APP_EXCELLENT
+INFO:loan_orchestrator:Analyzing profile for applicant APP_EXCELLENT
+INFO:loan_orchestrator:Profile analysis complete: APP_EXCELLENT - Risk Score: 0.00
+INFO:loan_orchestrator:Running financial risk assessment for APP_EXCELLENT
+INFO:loan_orchestrator:Assessing financial risk for applicant APP_EXCELLENT
+INFO:loan_orchestrator:Financial risk assessment complete: APP_EXCELLENT - Risk Score: 0.00
+INFO:loan_orchestrator:Aggregating risk assessment for APP_EXCELLENT
+INFO:loan_orchestrator:Making loan decision for APP_EXCELLENT
+INFO:loan_orchestrator:Making loan decision for applicant APP_EXCELLENT
+INFO:loan_orchestrator:Loan decision made: APP_EXCELLENT - Decision: approved, Score: 100.00
+INFO:loan_orchestrator:Performing compliance checks for APP_EXCELLENT
+INFO:loan_orchestrator:Performing compliance checks for applicant APP_EXCELLENT
+INFO:loan_orchestrator:Compliance check complete: APP_EXCELLENT - Compliant: True, Flags: 0, Actions: 4
+INFO:__main__:  Status: approved, Decision: approved, Score: 100.00
+INFO:__main__:Processing APP_GOOD: Michael Chen
+INFO:loan_orchestrator:Executing application APP_GOOD through orchestrator
+INFO:loan_orchestrator:Validating input for application APP_GOOD
+INFO:loan_orchestrator:Running profile analysis for APP_GOOD
+INFO:loan_orchestrator:Analyzing profile for applicant APP_GOOD
+INFO:loan_orchestrator:Profile analysis complete: APP_GOOD - Risk Score: 1.00
+INFO:loan_orchestrator:Running financial risk assessment for APP_GOOD
+INFO:loan_orchestrator:Assessing financial risk for applicant APP_GOOD
+INFO:loan_orchestrator:Financial risk assessment complete: APP_GOOD - Risk Score: 10.00
+INFO:loan_orchestrator:Aggregating risk assessment for APP_GOOD
+INFO:loan_orchestrator:Making loan decision for APP_GOOD
+INFO:loan_orchestrator:Making loan decision for applicant APP_GOOD
+INFO:loan_orchestrator:Loan decision made: APP_GOOD - Decision: approved, Score: 95.70
+INFO:loan_orchestrator:Performing compliance checks for APP_GOOD
+INFO:loan_orchestrator:Performing compliance checks for applicant APP_GOOD
+INFO:loan_orchestrator:Compliance check complete: APP_GOOD - Compliant: True, Flags: 0, Actions: 4
+INFO:__main__:  Status: approved, Decision: approved, Score: 95.70
+INFO:__main__:Processing APP_AVERAGE: Jennifer Lee
+INFO:loan_orchestrator:Executing application APP_AVERAGE through orchestrator
+INFO:loan_orchestrator:Validating input for application APP_AVERAGE
+INFO:loan_orchestrator:Running profile analysis for APP_AVERAGE
+INFO:loan_orchestrator:Analyzing profile for applicant APP_AVERAGE
+INFO:loan_orchestrator:Profile analysis complete: APP_AVERAGE - Risk Score: 19.00
+INFO:loan_orchestrator:Running financial risk assessment for APP_AVERAGE
+INFO:loan_orchestrator:Assessing financial risk for applicant APP_AVERAGE
+INFO:loan_orchestrator:Financial risk assessment complete: APP_AVERAGE - Risk Score: 45.00
+INFO:loan_orchestrator:Aggregating risk assessment for APP_AVERAGE
+INFO:loan_orchestrator:Making loan decision for APP_AVERAGE
+INFO:loan_orchestrator:Making loan decision for applicant APP_AVERAGE
+INFO:loan_orchestrator:Loan decision made: APP_AVERAGE - Decision: approved, Score: 76.30
+INFO:loan_orchestrator:Performing compliance checks for APP_AVERAGE
+INFO:loan_orchestrator:Performing compliance checks for applicant APP_AVERAGE
+INFO:loan_orchestrator:Compliance check complete: APP_AVERAGE - Compliant: True, Flags: 0, Actions: 4
+INFO:__main__:  Status: approved, Decision: approved, Score: 76.30
+INFO:__main__:Processing APP_BELOW_AVG: David Martinez
+INFO:loan_orchestrator:Executing application APP_BELOW_AVG through orchestrator
+INFO:loan_orchestrator:Validating input for application APP_BELOW_AVG
+INFO:loan_orchestrator:Running profile analysis for APP_BELOW_AVG
+INFO:loan_orchestrator:Analyzing profile for applicant APP_BELOW_AVG
+INFO:loan_orchestrator:Profile analysis complete: APP_BELOW_AVG - Risk Score: 66.00
+INFO:loan_orchestrator:Running financial risk assessment for APP_BELOW_AVG
+INFO:loan_orchestrator:Assessing financial risk for applicant APP_BELOW_AVG
+INFO:loan_orchestrator:Financial risk assessment complete: APP_BELOW_AVG - Risk Score: 95.00
+INFO:loan_orchestrator:Aggregating risk assessment for APP_BELOW_AVG
+INFO:loan_orchestrator:Making loan decision for APP_BELOW_AVG
+INFO:loan_orchestrator:Making loan decision for applicant APP_BELOW_AVG
+INFO:loan_orchestrator:Loan decision made: APP_BELOW_AVG - Decision: rejected, Score: 12.20
+INFO:loan_orchestrator:Performing compliance checks for APP_BELOW_AVG
+INFO:loan_orchestrator:Performing compliance checks for applicant APP_BELOW_AVG
+INFO:loan_orchestrator:Compliance check complete: APP_BELOW_AVG - Compliant: True, Flags: 0, Actions: 4
+INFO:__main__:  Status: rejected, Decision: rejected, Score: 12.20
+INFO:__main__:Processing APP_POOR: Robert Wilson
+INFO:loan_orchestrator:Executing application APP_POOR through orchestrator
+INFO:loan_orchestrator:Validating input for application APP_POOR
+INFO:loan_orchestrator:Running profile analysis for APP_POOR
+INFO:loan_orchestrator:Analyzing profile for applicant APP_POOR
+INFO:loan_orchestrator:Profile analysis complete: APP_POOR - Risk Score: 100.00
+INFO:loan_orchestrator:Running financial risk assessment for APP_POOR
+INFO:loan_orchestrator:Assessing financial risk for applicant APP_POOR
+INFO:loan_orchestrator:Financial risk assessment complete: APP_POOR - Risk Score: 95.00
+INFO:loan_orchestrator:Aggregating risk assessment for APP_POOR
+INFO:loan_orchestrator:Making loan decision for APP_POOR
+INFO:loan_orchestrator:Making loan decision for applicant APP_POOR
+INFO:loan_orchestrator:Loan decision made: APP_POOR - Decision: rejected, Score: 2.00
+INFO:loan_orchestrator:Performing compliance checks for APP_POOR
+INFO:loan_orchestrator:Performing compliance checks for applicant APP_POOR
+INFO:loan_orchestrator:Compliance check complete: APP_POOR - Compliant: True, Flags: 0, Actions: 4
+INFO:__main__:  Status: rejected, Decision: rejected, Score: 2.00
+INFO:__main__:
+--- Batch Processing Summary ---
+INFO:__main__:Total Applications: 5
+INFO:__main__:Processing Time: 0.03s
+INFO:__main__:Average Time per Application: 0.01s
+INFO:__main__:
+Decision Breakdown:
+INFO:__main__:  Approved: 3
+INFO:__main__:  Rejected: 2
+INFO:__main__:  Conditional Approval: 0
+INFO:__main__:  Manual Review: 0
+INFO:__main__:
+============================================================
+INFO:__main__:EXAMPLE 3: Monitoring and Logging
+INFO:__main__:============================================================
+INFO:__main__:Processing application with detailed monitoring
+INFO:loan_orchestrator:Executing application APP_MONITORING through orchestrator
+INFO:loan_orchestrator:Validating input for application APP_MONITORING
+INFO:loan_orchestrator:Running profile analysis for APP_MONITORING
+INFO:loan_orchestrator:Analyzing profile for applicant APP_MONITORING
+INFO:loan_orchestrator:Profile analysis complete: APP_MONITORING - Risk Score: 12.00
+INFO:loan_orchestrator:Running financial risk assessment for APP_MONITORING
+INFO:loan_orchestrator:Assessing financial risk for applicant APP_MONITORING
+INFO:loan_orchestrator:Financial risk assessment complete: APP_MONITORING - Risk Score: 20.00
+INFO:loan_orchestrator:Aggregating risk assessment for APP_MONITORING
+INFO:loan_orchestrator:Making loan decision for APP_MONITORING
+INFO:loan_orchestrator:Making loan decision for applicant APP_MONITORING
+INFO:loan_orchestrator:Loan decision made: APP_MONITORING - Decision: approved, Score: 88.40
+INFO:loan_orchestrator:Performing compliance checks for APP_MONITORING
+INFO:loan_orchestrator:Performing compliance checks for applicant APP_MONITORING
+INFO:loan_orchestrator:Compliance check complete: APP_MONITORING - Compliant: True, Flags: 0, Actions: 4
+INFO:__main__:
+--- Execution Timeline ---
+INFO:__main__:initialization: completed
+INFO:__main__:input_validation: completed
+INFO:__main__:profile_analysis: completed
+INFO:__main__:financial_risk_assessment: completed
+INFO:__main__:risk_aggregation: completed
+INFO:__main__:loan_decision: completed
+INFO:__main__:compliance_check: completed
+INFO:__main__:output_formatting: completed
+INFO:__main__:
+--- Risk Assessment Details ---
+ERROR:__main__:Error during example execution: 'RiskAssessment' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/ubuntu/Desktop/demo/example_usage.py", line 643, in main
+    example_3_monitoring_and_logging()
+  File "/home/ubuntu/Desktop/demo/example_usage.py", line 324, in example_3_monitoring_and_logging
+    logger.info(f"Overall Risk Level: {risk['overall_risk_level']}")
+                                       ~~~~^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'RiskAssessment' object is not subscriptable

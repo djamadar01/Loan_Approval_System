@@ -1,0 +1,770 @@
+{
+  "NOTIF-20260618-116776": {
+    "timestamp": "2026-06-18T05:07:38.515827+00:00",
+    "recipient": "alice@example.com",
+    "subject": "Important Update",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-723220": {
+    "timestamp": "2026-06-18T05:07:38.517835+00:00",
+    "recipient": "user0@example.com",
+    "subject": "Notification 0",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-6835F1": {
+    "timestamp": "2026-06-18T05:07:38.518924+00:00",
+    "recipient": "user1@example.com",
+    "subject": "Notification 1",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-3DE90B": {
+    "timestamp": "2026-06-18T05:07:38.520225+00:00",
+    "recipient": "user2@example.com",
+    "subject": "Notification 2",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-69DF7E": {
+    "timestamp": "2026-06-18T05:07:38.522441+00:00",
+    "recipient": "user3@example.com",
+    "subject": "Notification 3",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-5A9A0D": {
+    "timestamp": "2026-06-18T05:07:38.523521+00:00",
+    "recipient": "user4@example.com",
+    "subject": "Notification 4",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-662640": {
+    "timestamp": "2026-06-18T05:07:38.526616+00:00",
+    "recipient": "test@example.com",
+    "subject": "Subject",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-37DF21": {
+    "timestamp": "2026-06-18T05:07:38.528670+00:00",
+    "recipient": "test@example.com",
+    "subject": "Subject",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-E23708": {
+    "timestamp": "2026-06-18T05:07:38.531275+00:00",
+    "recipient": "user-low@example.com",
+    "subject": "Priority low",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-B91319": {
+    "timestamp": "2026-06-18T05:07:38.532485+00:00",
+    "recipient": "user-normal@example.com",
+    "subject": "Priority normal",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-AB899C": {
+    "timestamp": "2026-06-18T05:07:38.534158+00:00",
+    "recipient": "user-high@example.com",
+    "subject": "Priority high",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-C1A488": {
+    "timestamp": "2026-06-18T05:07:38.536445+00:00",
+    "recipient": "user-critical@example.com",
+    "subject": "Priority critical",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-5777E3": {
+    "timestamp": "2026-06-18T05:07:38.538294+00:00",
+    "recipient": "test@example.com",
+    "subject": "Subject",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-83E4D6": {
+    "timestamp": "2026-06-18T05:07:38.540052+00:00",
+    "recipient": "user-general@example.com",
+    "subject": "Type general",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-BD3059": {
+    "timestamp": "2026-06-18T05:07:38.541204+00:00",
+    "recipient": "user-alert@example.com",
+    "subject": "Type alert",
+    "notification_type": "alert"
+  },
+  "NOTIF-20260618-4637F2": {
+    "timestamp": "2026-06-18T05:07:38.542504+00:00",
+    "recipient": "user-warning@example.com",
+    "subject": "Type warning",
+    "notification_type": "warning"
+  },
+  "NOTIF-20260618-EA8CDA": {
+    "timestamp": "2026-06-18T05:07:38.543753+00:00",
+    "recipient": "user-urgent@example.com",
+    "subject": "Type urgent",
+    "notification_type": "urgent"
+  },
+  "NOTIF-20260618-15202C": {
+    "timestamp": "2026-06-18T05:07:38.545696+00:00",
+    "recipient": "test1@example.com",
+    "subject": "Subject 1",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-9BC99D": {
+    "timestamp": "2026-06-18T05:07:38.546917+00:00",
+    "recipient": "test2@example.com",
+    "subject": "Subject 2",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-7D6D21": {
+    "timestamp": "2026-06-18T05:07:38.549001+00:00",
+    "recipient": "test@example.com",
+    "subject": "Test Subject",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-DA373F": {
+    "timestamp": "2026-06-18T05:07:38.550764+00:00",
+    "recipient": "test@example.com",
+    "subject": "Subject",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-448475": {
+    "timestamp": "2026-06-18T05:07:55.042442+00:00",
+    "recipient": "alice@example.com",
+    "subject": "Important Update",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-628122": {
+    "timestamp": "2026-06-18T05:07:55.045179+00:00",
+    "recipient": "user0@example.com",
+    "subject": "Notification 0",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-DB2D75": {
+    "timestamp": "2026-06-18T05:07:55.046584+00:00",
+    "recipient": "user1@example.com",
+    "subject": "Notification 1",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-B4AD68": {
+    "timestamp": "2026-06-18T05:07:55.048015+00:00",
+    "recipient": "user2@example.com",
+    "subject": "Notification 2",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-13B538": {
+    "timestamp": "2026-06-18T05:07:55.049362+00:00",
+    "recipient": "user3@example.com",
+    "subject": "Notification 3",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-F2077E": {
+    "timestamp": "2026-06-18T05:07:55.050900+00:00",
+    "recipient": "user4@example.com",
+    "subject": "Notification 4",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-C53052": {
+    "timestamp": "2026-06-18T05:07:55.054183+00:00",
+    "recipient": "test@example.com",
+    "subject": "Subject",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-3D3A95": {
+    "timestamp": "2026-06-18T05:07:55.057437+00:00",
+    "recipient": "test@example.com",
+    "subject": "Subject",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-3D204F": {
+    "timestamp": "2026-06-18T05:07:55.061115+00:00",
+    "recipient": "user-low@example.com",
+    "subject": "Priority low",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-4D466C": {
+    "timestamp": "2026-06-18T05:07:55.062615+00:00",
+    "recipient": "user-normal@example.com",
+    "subject": "Priority normal",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-909DA4": {
+    "timestamp": "2026-06-18T05:07:55.063938+00:00",
+    "recipient": "user-high@example.com",
+    "subject": "Priority high",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-A18FA8": {
+    "timestamp": "2026-06-18T05:07:55.065894+00:00",
+    "recipient": "user-critical@example.com",
+    "subject": "Priority critical",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-E71534": {
+    "timestamp": "2026-06-18T05:07:55.068073+00:00",
+    "recipient": "test@example.com",
+    "subject": "Subject",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-B5741F": {
+    "timestamp": "2026-06-18T05:07:55.070205+00:00",
+    "recipient": "user-general@example.com",
+    "subject": "Type general",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-E065DC": {
+    "timestamp": "2026-06-18T05:07:55.071733+00:00",
+    "recipient": "user-alert@example.com",
+    "subject": "Type alert",
+    "notification_type": "alert"
+  },
+  "NOTIF-20260618-79B82A": {
+    "timestamp": "2026-06-18T05:07:55.073154+00:00",
+    "recipient": "user-warning@example.com",
+    "subject": "Type warning",
+    "notification_type": "warning"
+  },
+  "NOTIF-20260618-1D66F4": {
+    "timestamp": "2026-06-18T05:07:55.076692+00:00",
+    "recipient": "user-urgent@example.com",
+    "subject": "Type urgent",
+    "notification_type": "urgent"
+  },
+  "NOTIF-20260618-FDBBE2": {
+    "timestamp": "2026-06-18T05:07:55.079081+00:00",
+    "recipient": "test1@example.com",
+    "subject": "Subject 1",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-91E86A": {
+    "timestamp": "2026-06-18T05:07:55.080878+00:00",
+    "recipient": "test2@example.com",
+    "subject": "Subject 2",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-4C7341": {
+    "timestamp": "2026-06-18T05:07:55.083157+00:00",
+    "recipient": "test@example.com",
+    "subject": "Test Subject",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-F7B25A": {
+    "timestamp": "2026-06-18T05:07:55.085452+00:00",
+    "recipient": "test@example.com",
+    "subject": "Subject",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-6591DE": {
+    "timestamp": "2026-06-18T05:08:16.649208+00:00",
+    "recipient": "alice@example.com",
+    "subject": "Account Update",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-5BE5A7": {
+    "timestamp": "2026-06-18T05:08:16.651064+00:00",
+    "recipient": "bob@example.com",
+    "subject": "Suspicious Activity Detected",
+    "notification_type": "alert"
+  },
+  "NOTIF-20260618-532A9F": {
+    "timestamp": "2026-06-18T05:08:16.652836+00:00",
+    "recipient": "charlie@example.com",
+    "subject": "System Maintenance - Action Required",
+    "notification_type": "urgent"
+  },
+  "NOTIF-20260618-0EACFB": {
+    "timestamp": "2026-06-18T05:09:31.191997+00:00",
+    "recipient": "user@example.com",
+    "subject": "Welcome!",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-B7A0FA": {
+    "timestamp": "2026-06-18T05:09:31.194304+00:00",
+    "recipient": "admin@example.com",
+    "subject": "[LOW] Action Required",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-7655DF": {
+    "timestamp": "2026-06-18T05:09:31.196402+00:00",
+    "recipient": "admin@example.com",
+    "subject": "[NORMAL] Action Required",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-3C3758": {
+    "timestamp": "2026-06-18T05:09:31.198570+00:00",
+    "recipient": "admin@example.com",
+    "subject": "[HIGH] Action Required",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-D7E70B": {
+    "timestamp": "2026-06-18T05:09:31.200559+00:00",
+    "recipient": "admin@example.com",
+    "subject": "[CRITICAL] Action Required",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-68B5BF": {
+    "timestamp": "2026-06-18T05:09:31.202803+00:00",
+    "recipient": "operations@example.com",
+    "subject": "Product Update Available",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-BB43A3": {
+    "timestamp": "2026-06-18T05:09:31.204734+00:00",
+    "recipient": "operations@example.com",
+    "subject": "Price Change Alert",
+    "notification_type": "alert"
+  },
+  "NOTIF-20260618-B78712": {
+    "timestamp": "2026-06-18T05:09:31.206476+00:00",
+    "recipient": "operations@example.com",
+    "subject": "High Memory Usage",
+    "notification_type": "warning"
+  },
+  "NOTIF-20260618-C188DD": {
+    "timestamp": "2026-06-18T05:09:31.208548+00:00",
+    "recipient": "operations@example.com",
+    "subject": "Account Suspended",
+    "notification_type": "urgent"
+  },
+  "NOTIF-20260618-125E09": {
+    "timestamp": "2026-06-18T05:09:31.210573+00:00",
+    "recipient": "support@example.com",
+    "subject": "New Support Ticket",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-6FC2A4": {
+    "timestamp": "2026-06-18T05:09:31.213512+00:00",
+    "recipient": "user0@example.com",
+    "subject": "Notification 0",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-B0A319": {
+    "timestamp": "2026-06-18T05:09:31.215496+00:00",
+    "recipient": "user1@example.com",
+    "subject": "Notification 1",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-A09CD0": {
+    "timestamp": "2026-06-18T05:09:31.217547+00:00",
+    "recipient": "user2@example.com",
+    "subject": "Notification 2",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-4DB9CC": {
+    "timestamp": "2026-06-18T05:09:31.221105+00:00",
+    "recipient": "user@example.com",
+    "subject": "Status Tracking Test",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-45A16B": {
+    "timestamp": "2026-06-18T05:09:31.224262+00:00",
+    "recipient": "alice@example.com",
+    "subject": "Welcome, Alice!",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-4FEAF5": {
+    "timestamp": "2026-06-18T05:09:31.226378+00:00",
+    "recipient": "bob@example.com",
+    "subject": "Welcome, Bob!",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-3A65CF": {
+    "timestamp": "2026-06-18T05:09:31.228792+00:00",
+    "recipient": "charlie@example.com",
+    "subject": "Welcome, Charlie!",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-98666F": {
+    "timestamp": "2026-06-18T05:09:31.231521+00:00",
+    "recipient": "valid@example.com",
+    "subject": "Test",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-EA6D89": {
+    "timestamp": "2026-06-18T05:09:31.233599+00:00",
+    "recipient": "test@example.com",
+    "subject": "Test",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-584430": {
+    "timestamp": "2026-06-18T05:09:31.237259+00:00",
+    "recipient": "user0@example.com",
+    "subject": "Compliance Test 0",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-674636": {
+    "timestamp": "2026-06-18T05:09:31.239132+00:00",
+    "recipient": "user1@example.com",
+    "subject": "Compliance Test 1",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-F9F8EE": {
+    "timestamp": "2026-06-18T05:09:31.241097+00:00",
+    "recipient": "user2@example.com",
+    "subject": "Compliance Test 2",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-2723EA": {
+    "timestamp": "2026-06-18T05:09:31.243113+00:00",
+    "recipient": "user3@example.com",
+    "subject": "Compliance Test 3",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-F60678": {
+    "timestamp": "2026-06-18T05:09:31.245160+00:00",
+    "recipient": "user4@example.com",
+    "subject": "Compliance Test 4",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-9F93F6": {
+    "timestamp": "2026-06-18T05:09:31.248848+00:00",
+    "recipient": "export@example.com",
+    "subject": "Export Test",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-D1707E": {
+    "timestamp": "2026-06-18T05:11:07.802906+00:00",
+    "recipient": "verify@example.com",
+    "subject": "Verification Test",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-BFA280": {
+    "timestamp": "2026-06-18T05:11:09.985672+00:00",
+    "recipient": "alice@example.com",
+    "subject": "Important Update",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-D650AF": {
+    "timestamp": "2026-06-18T05:11:10.001785+00:00",
+    "recipient": "user0@example.com",
+    "subject": "Notification 0",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-C272B1": {
+    "timestamp": "2026-06-18T05:11:10.012311+00:00",
+    "recipient": "user1@example.com",
+    "subject": "Notification 1",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-7A89C1": {
+    "timestamp": "2026-06-18T05:11:10.020771+00:00",
+    "recipient": "user2@example.com",
+    "subject": "Notification 2",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-D035AB": {
+    "timestamp": "2026-06-18T05:11:10.027070+00:00",
+    "recipient": "user3@example.com",
+    "subject": "Notification 3",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-7BF7CF": {
+    "timestamp": "2026-06-18T05:11:10.035310+00:00",
+    "recipient": "user4@example.com",
+    "subject": "Notification 4",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-3FBC03": {
+    "timestamp": "2026-06-18T05:11:10.054513+00:00",
+    "recipient": "test@example.com",
+    "subject": "Subject",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-C49050": {
+    "timestamp": "2026-06-18T05:11:10.070686+00:00",
+    "recipient": "test@example.com",
+    "subject": "Subject",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-DA2723": {
+    "timestamp": "2026-06-18T05:11:10.091158+00:00",
+    "recipient": "user-low@example.com",
+    "subject": "Priority low",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-185A2E": {
+    "timestamp": "2026-06-18T05:11:10.094325+00:00",
+    "recipient": "user-normal@example.com",
+    "subject": "Priority normal",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-AA2C72": {
+    "timestamp": "2026-06-18T05:11:10.097146+00:00",
+    "recipient": "user-high@example.com",
+    "subject": "Priority high",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-2B38DA": {
+    "timestamp": "2026-06-18T05:11:10.105705+00:00",
+    "recipient": "user-critical@example.com",
+    "subject": "Priority critical",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-0DD1D6": {
+    "timestamp": "2026-06-18T05:11:10.114662+00:00",
+    "recipient": "test@example.com",
+    "subject": "Subject",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-14DFDB": {
+    "timestamp": "2026-06-18T05:11:10.125471+00:00",
+    "recipient": "user-general@example.com",
+    "subject": "Type general",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-68E826": {
+    "timestamp": "2026-06-18T05:11:10.135773+00:00",
+    "recipient": "user-alert@example.com",
+    "subject": "Type alert",
+    "notification_type": "alert"
+  },
+  "NOTIF-20260618-9173B5": {
+    "timestamp": "2026-06-18T05:11:10.144315+00:00",
+    "recipient": "user-warning@example.com",
+    "subject": "Type warning",
+    "notification_type": "warning"
+  },
+  "NOTIF-20260618-95F319": {
+    "timestamp": "2026-06-18T05:11:10.152697+00:00",
+    "recipient": "user-urgent@example.com",
+    "subject": "Type urgent",
+    "notification_type": "urgent"
+  },
+  "NOTIF-20260618-164922": {
+    "timestamp": "2026-06-18T05:11:10.163315+00:00",
+    "recipient": "test1@example.com",
+    "subject": "Subject 1",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-7A2697": {
+    "timestamp": "2026-06-18T05:11:10.165838+00:00",
+    "recipient": "test2@example.com",
+    "subject": "Subject 2",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-558EDE": {
+    "timestamp": "2026-06-18T05:11:10.169578+00:00",
+    "recipient": "test@example.com",
+    "subject": "Test Subject",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-541D22": {
+    "timestamp": "2026-06-18T05:11:10.173048+00:00",
+    "recipient": "test@example.com",
+    "subject": "Subject",
+    "notification_type": "general"
+  },
+  "NOTIF-20260618-D93D05": {
+    "timestamp": "2026-06-18T05:19:28.532003+00:00",
+    "recipient": "applicant1@example.com",
+    "subject": "Compliance Review - Application APP-001",
+    "notification_type": "compliance_decision"
+  },
+  "NOTIF-20260618-478941": {
+    "timestamp": "2026-06-18T05:19:28.534106+00:00",
+    "recipient": "applicant1@example.com",
+    "subject": "Compliance Decision - Case NOTIF-20260618-D93D05",
+    "notification_type": "decision"
+  },
+  "NOTIF-20260618-A1E755": {
+    "timestamp": "2026-06-18T05:19:28.537984+00:00",
+    "recipient": "applicant2@example.com",
+    "subject": "Compliance Review - Application APP-002",
+    "notification_type": "compliance_decision"
+  },
+  "NOTIF-20260618-C1ADBE": {
+    "timestamp": "2026-06-18T05:19:28.540199+00:00",
+    "recipient": "applicant2@example.com",
+    "subject": "Compliance Decision - Case NOTIF-20260618-A1E755",
+    "notification_type": "decision"
+  },
+  "NOTIF-20260618-004B1D": {
+    "timestamp": "2026-06-18T05:19:28.543041+00:00",
+    "recipient": "applicant2@example.com",
+    "subject": "Compliance Escalation Required - Case NOTIF-20260618-A1E755",
+    "notification_type": "escalation"
+  },
+  "NOTIF-20260618-4E0D07": {
+    "timestamp": "2026-06-18T05:19:28.546691+00:00",
+    "recipient": "applicant3@example.com",
+    "subject": "Compliance Review - Application APP-003",
+    "notification_type": "compliance_decision"
+  },
+  "NOTIF-20260618-1CCAE0": {
+    "timestamp": "2026-06-18T05:19:28.548717+00:00",
+    "recipient": "applicant3@example.com",
+    "subject": "Compliance Decision - Case NOTIF-20260618-4E0D07",
+    "notification_type": "decision"
+  },
+  "NOTIF-20260618-F34CB2": {
+    "timestamp": "2026-06-18T05:19:28.551664+00:00",
+    "recipient": "applicant3@example.com",
+    "subject": "Compliance Review Required - Case NOTIF-20260618-4E0D07",
+    "notification_type": "review"
+  },
+  "NOTIF-20260618-16718A": {
+    "timestamp": "2026-06-18T05:20:06.647658+00:00",
+    "recipient": "compliant@example.com",
+    "subject": "Compliance Check",
+    "notification_type": "compliance_decision"
+  },
+  "NOTIF-20260618-94A63F": {
+    "timestamp": "2026-06-18T05:20:06.656426+00:00",
+    "recipient": "compliant@example.com",
+    "subject": "Compliance Decision - Case NOTIF-20260618-16718A",
+    "notification_type": "decision"
+  },
+  "NOTIF-20260618-B7F46D": {
+    "timestamp": "2026-06-18T05:20:06.661547+00:00",
+    "recipient": "noncompliant@example.com",
+    "subject": "Compliance Check",
+    "notification_type": "compliance_decision"
+  },
+  "NOTIF-20260618-37EB93": {
+    "timestamp": "2026-06-18T05:20:06.666431+00:00",
+    "recipient": "noncompliant@example.com",
+    "subject": "Compliance Decision - Case NOTIF-20260618-B7F46D",
+    "notification_type": "decision"
+  },
+  "NOTIF-20260618-A29130": {
+    "timestamp": "2026-06-18T05:20:06.672049+00:00",
+    "recipient": "noncompliant@example.com",
+    "subject": "Compliance Escalation Required - Case NOTIF-20260618-B7F46D",
+    "notification_type": "escalation"
+  },
+  "NOTIF-20260618-B56C2D": {
+    "timestamp": "2026-06-18T05:20:06.681300+00:00",
+    "recipient": "partial@example.com",
+    "subject": "Compliance Check",
+    "notification_type": "compliance_decision"
+  },
+  "NOTIF-20260618-8673ED": {
+    "timestamp": "2026-06-18T05:20:06.687517+00:00",
+    "recipient": "partial@example.com",
+    "subject": "Compliance Decision - Case NOTIF-20260618-B56C2D",
+    "notification_type": "decision"
+  },
+  "NOTIF-20260618-8FDE44": {
+    "timestamp": "2026-06-18T05:20:06.697028+00:00",
+    "recipient": "partial@example.com",
+    "subject": "Compliance Review Required - Case NOTIF-20260618-B56C2D",
+    "notification_type": "review"
+  },
+  "NOTIF-20260618-AF2F63": {
+    "timestamp": "2026-06-18T05:20:06.715463+00:00",
+    "recipient": "app1@example.com",
+    "subject": "Check 1",
+    "notification_type": "compliance_decision"
+  },
+  "NOTIF-20260618-469394": {
+    "timestamp": "2026-06-18T05:20:06.719294+00:00",
+    "recipient": "app1@example.com",
+    "subject": "Compliance Decision - Case NOTIF-20260618-AF2F63",
+    "notification_type": "decision"
+  },
+  "NOTIF-20260618-342FDA": {
+    "timestamp": "2026-06-18T05:20:06.726271+00:00",
+    "recipient": "app2@example.com",
+    "subject": "Check 2",
+    "notification_type": "compliance_decision"
+  },
+  "NOTIF-20260618-1345D5": {
+    "timestamp": "2026-06-18T05:20:06.730652+00:00",
+    "recipient": "app2@example.com",
+    "subject": "Compliance Decision - Case NOTIF-20260618-342FDA",
+    "notification_type": "decision"
+  },
+  "NOTIF-20260618-DAACE7": {
+    "timestamp": "2026-06-18T05:20:06.738852+00:00",
+    "recipient": "notif@example.com",
+    "subject": "Compliance Check",
+    "notification_type": "compliance_decision"
+  },
+  "NOTIF-20260618-D7A429": {
+    "timestamp": "2026-06-18T05:20:06.746102+00:00",
+    "recipient": "notif@example.com",
+    "subject": "Compliance Decision - Case NOTIF-20260618-DAACE7",
+    "notification_type": "decision"
+  },
+  "NOTIF-20260618-FA4026": {
+    "timestamp": "2026-06-18T05:20:06.752076+00:00",
+    "recipient": "notif@example.com",
+    "subject": "Compliance Escalation Required - Case NOTIF-20260618-DAACE7",
+    "notification_type": "escalation"
+  },
+  "NOTIF-20260618-E451FC": {
+    "timestamp": "2026-06-18T05:20:06.757952+00:00",
+    "recipient": "audit@example.com",
+    "subject": "Compliance Check",
+    "notification_type": "compliance_decision"
+  },
+  "NOTIF-20260618-F19446": {
+    "timestamp": "2026-06-18T05:20:06.761956+00:00",
+    "recipient": "audit@example.com",
+    "subject": "Compliance Decision - Case NOTIF-20260618-E451FC",
+    "notification_type": "decision"
+  },
+  "NOTIF-20260618-88EC2D": {
+    "timestamp": "2026-06-18T05:20:06.767977+00:00",
+    "recipient": "summary@example.com",
+    "subject": "Compliance Check",
+    "notification_type": "compliance_decision"
+  },
+  "NOTIF-20260618-1DE292": {
+    "timestamp": "2026-06-18T05:20:06.770298+00:00",
+    "recipient": "summary@example.com",
+    "subject": "Compliance Decision - Case NOTIF-20260618-88EC2D",
+    "notification_type": "decision"
+  },
+  "NOTIF-20260618-2D949D": {
+    "timestamp": "2026-06-18T05:20:06.782593+00:00",
+    "recipient": "stats0@example.com",
+    "subject": "Compliance Check",
+    "notification_type": "compliance_decision"
+  },
+  "NOTIF-20260618-C22EE9": {
+    "timestamp": "2026-06-18T05:20:06.785111+00:00",
+    "recipient": "stats0@example.com",
+    "subject": "Compliance Decision - Case NOTIF-20260618-2D949D",
+    "notification_type": "decision"
+  },
+  "NOTIF-20260618-9A825B": {
+    "timestamp": "2026-06-18T05:20:06.790842+00:00",
+    "recipient": "stats1@example.com",
+    "subject": "Compliance Check",
+    "notification_type": "compliance_decision"
+  },
+  "NOTIF-20260618-C72DE0": {
+    "timestamp": "2026-06-18T05:20:06.796831+00:00",
+    "recipient": "stats1@example.com",
+    "subject": "Compliance Decision - Case NOTIF-20260618-9A825B",
+    "notification_type": "decision"
+  },
+  "NOTIF-20260618-DD0D18": {
+    "timestamp": "2026-06-18T05:20:06.805096+00:00",
+    "recipient": "e2e1@example.com",
+    "subject": "Initial Review",
+    "notification_type": "compliance_decision"
+  },
+  "NOTIF-20260618-CF68AC": {
+    "timestamp": "2026-06-18T05:20:06.807657+00:00",
+    "recipient": "e2e1@example.com",
+    "subject": "Compliance Decision - Case NOTIF-20260618-DD0D18",
+    "notification_type": "decision"
+  },
+  "NOTIF-20260618-AEEAC0": {
+    "timestamp": "2026-06-18T05:20:06.816102+00:00",
+    "recipient": "e2e2@example.com",
+    "subject": "Escalation Review",
+    "notification_type": "compliance_decision"
+  },
+  "NOTIF-20260618-4B6FD1": {
+    "timestamp": "2026-06-18T05:20:06.820632+00:00",
+    "recipient": "e2e2@example.com",
+    "subject": "Compliance Decision - Case NOTIF-20260618-AEEAC0",
+    "notification_type": "decision"
+  },
+  "NOTIF-20260618-44D8C7": {
+    "timestamp": "2026-06-18T05:20:06.826661+00:00",
+    "recipient": "e2e2@example.com",
+    "subject": "Compliance Escalation Required - Case NOTIF-20260618-AEEAC0",
+    "notification_type": "escalation"
+  }
+}

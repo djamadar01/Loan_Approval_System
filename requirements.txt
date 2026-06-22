@@ -1,0 +1,15 @@
+# Batch Processing System Requirements
+
+# Core dependencies (Python 3.7+)
+# No required external packages for core functionality
+
+# Optional dependencies for enhanced features
+pandas>=1.0.0          # For Parquet export and data analysis
+pyarrow>=2.0.0         # For Parquet format support
+pytest>=6.0.0          # For running test suite
+pytest-cov>=2.10.0     # For test coverage reports
+
+# Development dependencies
+black>=21.0b0           # Code formatting
+pylint>=2.8.0           # Code linting
+mypy>=0.900             # Type checking

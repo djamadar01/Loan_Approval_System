@@ -1,0 +1,159 @@
+{
+  "server_config": {
+    "name": "RiskRulesDB",
+    "version": "1.0.0",
+    "description": "Production-grade Risk Rules Database MCP Server with advanced financial analysis",
+    "log_level": "INFO"
+  },
+  "risk_thresholds": {
+    "debt_to_income": {
+      "low_risk": {
+        "max_ratio": 0.36,
+        "description": "Low risk - easily manageable debt levels"
+      },
+      "moderate_risk": {
+        "min_ratio": 0.36,
+        "max_ratio": 0.50,
+        "description": "Moderate risk - manageable but requires monitoring"
+      },
+      "high_risk": {
+        "min_ratio": 0.50,
+        "max_ratio": 0.75,
+        "description": "High risk - significant debt burden"
+      },
+      "critical_risk": {
+        "min_ratio": 0.75,
+        "description": "Critical risk - unsustainable debt levels"
+      }
+    },
+    "credit_score": {
+      "excellent": {
+        "min_score": 750,
+        "description": "Excellent credit profile"
+      },
+      "good": {
+        "min_score": 670,
+        "max_score": 749,
+        "description": "Good credit profile"
+      },
+      "fair": {
+        "min_score": 580,
+        "max_score": 669,
+        "description": "Fair credit profile"
+      },
+      "poor": {
+        "min_score": 500,
+        "max_score": 579,
+        "description": "Poor credit profile"
+      },
+      "very_poor": {
+        "max_score": 499,
+        "description": "Very poor credit profile"
+      }
+    },
+    "anomaly_detection": {
+      "transaction_spike_threshold": 2.5,
+      "spending_variance_threshold": 0.35,
+      "account_age_alert_days": 30,
+      "unusual_patterns_zscore": 3.0,
+      "high_velocity_transactions_count": 10,
+      "high_velocity_time_window_minutes": 30
+    }
+  },
+  "industry_benchmarks": {
+    "personal_loans": {
+      "avg_debt_to_income": 0.35,
+      "avg_credit_score": 670,
+      "default_rate": 0.025,
+      "approval_rate": 0.75
+    },
+    "mortgage": {
+      "avg_debt_to_income": 0.28,
+      "avg_credit_score": 720,
+      "default_rate": 0.001,
+      "approval_rate": 0.80
+    },
+    "auto_loan": {
+      "avg_debt_to_income": 0.20,
+      "avg_credit_score": 660,
+      "default_rate": 0.015,
+      "approval_rate": 0.82
+    },
+    "credit_card": {
+      "avg_debt_to_income": 0.15,
+      "avg_credit_score": 640,
+      "default_rate": 0.035,
+      "approval_rate": 0.70
+    }
+  },
+  "business_rules": {
+    "regulatory_compliance": {
+      "equal_credit_opportunity_act": {
+        "enabled": true,
+        "prohibited_criteria": ["age", "race", "color", "religion", "national_origin", "sex", "marital_status"],
+        "description": "ECOA compliance - no discrimination based on protected characteristics"
+      },
+      "fair_credit_reporting_act": {
+        "enabled": true,
+        "requires_disclosure": true,
+        "right_to_dispute": true,
+        "description": "FCRA compliance - consumer credit protections"
+      },
+      "fair_housing_act": {
+        "enabled": true,
+        "applicable_to": ["mortgage", "home_equity"],
+        "description": "FHA compliance for housing-related credit decisions"
+      }
+    },
+    "fraud_detection": {
+      "enabled": true,
+      "rules": [
+        {
+          "id": "synthetic_identity",
+          "weight": 1.0,
+          "condition": "new_ssn_with_high_credit_limit_request"
+        },
+        {
+          "id": "account_takeover",
+          "weight": 0.95,
+          "condition": "sudden_spending_pattern_change"
+        },
+        {
+          "id": "velocity_fraud",
+          "weight": 0.85,
+          "condition": "multiple_applications_same_day"
+        }
+      ]
+    },
+    "lending_limits": {
+      "max_dti_ratio": 0.75,
+      "min_credit_score": 500,
+      "max_credit_utilization": 0.95,
+      "minimum_income": 15000
+    }
+  },
+  "calculation_methods": {
+    "debt_to_income": {
+      "standard": {
+        "formula": "(total_monthly_debt_payments) / (gross_monthly_income)",
+        "includes": ["mortgage", "auto_loans", "student_loans", "credit_cards", "other_debts"]
+      },
+      "inclusive": {
+        "formula": "(total_monthly_debt_payments + proposed_new_payment) / (gross_monthly_income)",
+        "includes": ["all_existing_debts", "proposed_loan_payment"]
+      },
+      "conservative": {
+        "formula": "(total_monthly_debt_payments + proposed_new_payment) / (gross_monthly_income * 0.8)",
+        "description": "Accounts for potential income reduction"
+      }
+    }
+  },
+  "statistical_methods": {
+    "anomaly_detection": {
+      "zscore_threshold": 3.0,
+      "isolation_forest_contamination": 0.1,
+      "moving_average_window": 30,
+      "seasonal_decomposition_period": 365
+    }
+  }
+}

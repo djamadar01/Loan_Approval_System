@@ -1,0 +1,348 @@
+{
+  "server_config": {
+    "name": "RiskRulesDB-Enhanced",
+    "version": "2.0.0",
+    "description": "Production-grade Enhanced Risk Rules Database with advanced financial analysis",
+    "log_level": "INFO",
+    "features": [
+      "configurable_thresholds",
+      "historical_trending",
+      "ml_anomaly_detection",
+      "regulatory_versioning",
+      "custom_rule_engine"
+    ]
+  },
+  "feature_1_configurable_thresholds": {
+    "enabled": true,
+    "default_thresholds": {
+      "debt_to_income_ratio": {
+        "metric": "debt_to_income_ratio",
+        "low": 0.0,
+        "moderate": 0.36,
+        "high": 0.50,
+        "critical": 0.75,
+        "unit": "ratio",
+        "description": "Debt-to-Income ratio thresholds for risk assessment"
+      },
+      "credit_score": {
+        "metric": "credit_score",
+        "low": 750,
+        "moderate": 670,
+        "high": 580,
+        "critical": 300,
+        "unit": "score",
+        "description": "Credit score thresholds (inverse scoring - higher is better)",
+        "inverse_metric": true
+      },
+      "loan_to_income_ratio": {
+        "metric": "loan_to_income_ratio",
+        "low": 0.0,
+        "moderate": 2.5,
+        "high": 3.5,
+        "critical": 4.5,
+        "unit": "ratio",
+        "description": "Loan-to-Income ratio thresholds"
+      },
+      "annual_income": {
+        "metric": "annual_income",
+        "low": 100000,
+        "moderate": 50000,
+        "high": 30000,
+        "critical": 15000,
+        "unit": "dollars",
+        "description": "Minimum annual income thresholds"
+      }
+    },
+    "customizable": true,
+    "allow_new_metrics": true,
+    "audit_changes": true
+  },
+  "feature_2_historical_trending": {
+    "enabled": true,
+    "storage": {
+      "max_history_points": 1000,
+      "retention_days": 730,
+      "index_by": ["entity_id", "timestamp", "risk_level"]
+    },
+    "trend_analysis": {
+      "default_period_days": 30,
+      "calculate_statistics": true,
+      "detect_trend_direction": true,
+      "anomaly_threshold": 0.15
+    },
+    "cohort_analysis": {
+      "enabled": true,
+      "group_by_risk_level": true,
+      "calculate_percentiles": true
+    }
+  },
+  "feature_3_ml_anomaly_detection": {
+    "enabled": true,
+    "ensemble_methods": [
+      {
+        "name": "zscore",
+        "enabled": true,
+        "threshold": 3.0,
+        "weight": 0.25,
+        "description": "Z-score statistical anomaly detection"
+      },
+      {
+        "name": "isolation_forest",
+        "enabled": true,
+        "contamination": 0.1,
+        "weight": 0.35,
+        "approach": "simulated",
+        "description": "Isolation Forest for multivariate anomalies (simulated)"
+      },
+      {
+        "name": "spending_pattern",
+        "enabled": true,
+        "spike_threshold": 1.5,
+        "weight": 0.25,
+        "description": "Spending pattern and variance analysis"
+      },
+      {
+        "name": "velocity_detection",
+        "enabled": true,
+        "threshold": 50,
+        "unit": "x monthly income",
+        "weight": 0.15,
+        "description": "High-velocity transaction detection"
+      }
+    ],
+    "confidence_scoring": {
+      "min_confidence": 0.50,
+      "max_confidence": 0.95,
+      "formula": "0.5 + (anomaly_score / 2)"
+    },
+    "anomaly_types": [
+      "SPENDING_SPIKE",
+      "UNUSUAL_PATTERN",
+      "HIGH_VELOCITY",
+      "ACCOUNT_AGE",
+      "GEOGRAPHIC_ANOMALY",
+      "INCOME_VARIANCE"
+    ]
+  },
+  "feature_4_regulatory_versioning": {
+    "enabled": true,
+    "default_regulations": [
+      {
+        "rule_id": "ECOA_001",
+        "type": "ECOA",
+        "name": "Equal Credit Opportunity Act",
+        "version": "2.0",
+        "effective_date": "2024-01-01",
+        "description": "Prohibits discrimination based on protected characteristics",
+        "prohibited_criteria": [
+          "age",
+          "race",
+          "color",
+          "religion",
+          "national_origin",
+          "sex",
+          "marital_status",
+          "family_status"
+        ]
+      },
+      {
+        "rule_id": "FCRA_001",
+        "type": "FCRA",
+        "name": "Fair Credit Reporting Act",
+        "version": "1.5",
+        "effective_date": "2023-06-15",
+        "description": "Consumer credit reporting protections and dispute rights"
+      },
+      {
+        "rule_id": "GLBA_001",
+        "type": "GLBA",
+        "name": "Gramm-Leach-Bliley Act",
+        "version": "1.0",
+        "effective_date": "2023-01-01",
+        "description": "Privacy protection for nonpublic personal financial information"
+      }
+    ],
+    "version_control": {
+      "track_all_versions": true,
+      "allow_archiving": true,
+      "require_effective_date": true
+    },
+    "supported_regulations": [
+      "ECOA",
+      "FCRA",
+      "GLBA",
+      "TILA",
+      "FCRA",
+      "DODD_FRANK"
+    ]
+  },
+  "feature_5_custom_rule_engine": {
+    "enabled": true,
+    "rule_types": {
+      "threshold": {
+        "enabled": true,
+        "operators": [">", "<", ">=", "<=", "=="],
+        "description": "Simple threshold-based conditions"
+      },
+      "complex": {
+        "enabled": true,
+        "logic_operators": ["AND", "OR"],
+        "max_conditions": 10,
+        "description": "Multi-condition rules with logical operators"
+      },
+      "ml_based": {
+        "enabled": true,
+        "description": "ML model-based rules (extensible)"
+      }
+    },
+    "default_rules": [],
+    "rule_priority": {
+      "min": 0,
+      "max": 1000,
+      "default": 100,
+      "higher_priority": "evaluated_first"
+    },
+    "extensibility": {
+      "allow_custom_rule_classes": true,
+      "plugin_interface": "CustomRule",
+      "example_plugins": [
+        "ThresholdRule",
+        "ComplexRule",
+        "MLBasedRule (template)"
+      ]
+    }
+  },
+  "comprehensive_analysis": {
+    "enabled": true,
+    "features_included": [
+      "threshold_evaluation",
+      "historical_trend_analysis",
+      "anomaly_detection",
+      "regulatory_compliance_check",
+      "custom_rule_evaluation",
+      "final_recommendation"
+    ],
+    "output_format": {
+      "include_all_analyses": true,
+      "risk_score_calculation": "weighted_average",
+      "recommendation_logic": "risk_score_based"
+    }
+  },
+  "data_management": {
+    "history_storage": {
+      "type": "in_memory",
+      "note": "Upgrade to persistent storage (PostgreSQL, MongoDB) for production",
+      "max_records": 1000
+    },
+    "regulatory_rules": {
+      "storage": "in_memory",
+      "note": "Implement database for full version history"
+    },
+    "custom_rules": {
+      "storage": "in_memory",
+      "persistence": false,
+      "note": "Add database persistence for production"
+    }
+  },
+  "performance": {
+    "threshold_lookup": "O(1)",
+    "history_query": "O(n)",
+    "anomaly_detection": "O(n)",
+    "custom_rule_evaluation": "O(m)",
+    "batch_processing": {
+      "max_batch_size": 100,
+      "parallel_processing": false
+    }
+  },
+  "security": {
+    "input_validation": true,
+    "parameter_checking": true,
+    "error_handling": true,
+    "audit_logging": true,
+    "recommendations": [
+      "Run in isolated environment",
+      "Implement authentication at client level",
+      "Encrypt sensitive data at rest",
+      "Use HTTPS for all communications",
+      "Regular security audits"
+    ]
+  },
+  "compliance": {
+    "ecoa_validation": true,
+    "fcra_validation": true,
+    "fair_lending_rules": true,
+    "discrimination_prevention": true,
+    "audit_trail": true
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "JSON",
+    "log_all_tool_calls": true,
+    "log_decisions": true,
+    "log_threshold_changes": true,
+    "log_rule_evaluations": false
+  },
+  "integration_examples": {
+    "portfolio_monitoring": {
+      "description": "Monitor high-risk portfolio for deterioration",
+      "frequency": "Daily",
+      "tools": [
+        "record_risk_assessment",
+        "get_cohort_statistics",
+        "calculate_risk_trend"
+      ]
+    },
+    "policy_rollout": {
+      "description": "Test and rollout new lending policy",
+      "phases": [
+        "Configure thresholds",
+        "A/B test with custom rules",
+        "Monitor impact with trends",
+        "Gradual rollout"
+      ]
+    },
+    "fraud_detection": {
+      "description": "Early detection of fraudulent applications",
+      "tools": [
+        "detect_financial_anomalies",
+        "create_custom_threshold_rule",
+        "evaluate_custom_rules"
+      ]
+    },
+    "regulatory_audit": {
+      "description": "Ensure compliance with all regulations",
+      "tools": [
+        "get_active_regulatory_rules",
+        "validate_compliance",
+        "create_regulatory_rule_version"
+      ]
+    }
+  },
+  "deployment": {
+    "framework": "FastMCP",
+    "transport": "stdio",
+    "language": "Python 3.9+",
+    "requirements": ["fastmcp"],
+    "startup_command": "python riskrulesdb_enhanced_server.py",
+    "supported_clients": [
+      "Claude Desktop",
+      "Custom MCP Client",
+      "LangChain Integration"
+    ]
+  },
+  "monitoring": {
+    "metrics_to_track": [
+      "tool_call_count",
+      "average_response_time",
+      "error_rate",
+      "threshold_update_frequency",
+      "anomaly_detection_triggers",
+      "compliance_violation_rate"
+    ],
+    "alerts": {
+      "high_error_rate": "> 5%",
+      "slow_response": "> 2 seconds",
+      "unusual_anomaly_spikes": "> 50% of entities flagged"
+    }
+  }
+}

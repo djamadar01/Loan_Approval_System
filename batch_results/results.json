@@ -1,0 +1,382 @@
+[
+  {
+    "job_id": "job_000001",
+    "task_data": "{'id': 0, 'value': 0}",
+    "status": "completed",
+    "result": {
+      "input": {
+        "id": 0,
+        "value": 0
+      },
+      "processed_at": "2026-06-20T14:20:39.222320",
+      "result": 0
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:20:39.122214",
+    "end_time": "2026-06-20T14:20:39.222529",
+    "retry_count": 0,
+    "duration_seconds": 0.100315,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000002",
+    "task_data": "{'id': 1, 'value': 10}",
+    "status": "completed",
+    "result": {
+      "input": {
+        "id": 1,
+        "value": 10
+      },
+      "processed_at": "2026-06-20T14:20:39.222594",
+      "result": 20
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:20:39.122444",
+    "end_time": "2026-06-20T14:20:39.222695",
+    "retry_count": 0,
+    "duration_seconds": 0.100251,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000003",
+    "task_data": "{'id': 2, 'value': 20}",
+    "status": "completed",
+    "result": {
+      "input": {
+        "id": 2,
+        "value": 20
+      },
+      "processed_at": "2026-06-20T14:20:39.222769",
+      "result": 40
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:20:39.122673",
+    "end_time": "2026-06-20T14:20:39.222853",
+    "retry_count": 0,
+    "duration_seconds": 0.10018,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000004",
+    "task_data": "{'id': 3, 'value': 30}",
+    "status": "completed",
+    "result": {
+      "input": {
+        "id": 3,
+        "value": 30
+      },
+      "processed_at": "2026-06-20T14:20:39.222973",
+      "result": 60
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:20:39.122885",
+    "end_time": "2026-06-20T14:20:39.223053",
+    "retry_count": 0,
+    "duration_seconds": 0.100168,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000005",
+    "task_data": "{'id': 4, 'value': 40}",
+    "status": "completed",
+    "result": {
+      "input": {
+        "id": 4,
+        "value": 40
+      },
+      "processed_at": "2026-06-20T14:20:39.322654",
+      "result": 80
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:20:39.222559",
+    "end_time": "2026-06-20T14:20:39.322871",
+    "retry_count": 0,
+    "duration_seconds": 0.100312,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000007",
+    "task_data": "{'id': 6, 'value': 60}",
+    "status": "completed",
+    "result": {
+      "input": {
+        "id": 6,
+        "value": 60
+      },
+      "processed_at": "2026-06-20T14:20:39.322945",
+      "result": 120
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:20:39.222869",
+    "end_time": "2026-06-20T14:20:39.323046",
+    "retry_count": 0,
+    "duration_seconds": 0.100177,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000006",
+    "task_data": "{'id': 5, 'value': 50}",
+    "status": "completed",
+    "result": {
+      "input": {
+        "id": 5,
+        "value": 50
+      },
+      "processed_at": "2026-06-20T14:20:39.323087",
+      "result": 100
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:20:39.222711",
+    "end_time": "2026-06-20T14:20:39.323301",
+    "retry_count": 0,
+    "duration_seconds": 0.10059,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000008",
+    "task_data": "{'id': 7, 'value': 70}",
+    "status": "completed",
+    "result": {
+      "input": {
+        "id": 7,
+        "value": 70
+      },
+      "processed_at": "2026-06-20T14:20:39.323205",
+      "result": 140
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:20:39.223068",
+    "end_time": "2026-06-20T14:20:39.323404",
+    "retry_count": 0,
+    "duration_seconds": 0.100336,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000009",
+    "task_data": "{'id': 8, 'value': 80}",
+    "status": "completed",
+    "result": {
+      "input": {
+        "id": 8,
+        "value": 80
+      },
+      "processed_at": "2026-06-20T14:20:39.422997",
+      "result": 160
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:20:39.322896",
+    "end_time": "2026-06-20T14:20:39.423224",
+    "retry_count": 0,
+    "duration_seconds": 0.100328,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000010",
+    "task_data": "{'id': 9, 'value': 90}",
+    "status": "completed",
+    "result": {
+      "input": {
+        "id": 9,
+        "value": 90
+      },
+      "processed_at": "2026-06-20T14:20:39.423268",
+      "result": 180
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:20:39.323063",
+    "end_time": "2026-06-20T14:20:39.423363",
+    "retry_count": 0,
+    "duration_seconds": 0.1003,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000011",
+    "task_data": "{'id': 10, 'value': 100}",
+    "status": "completed",
+    "result": {
+      "input": {
+        "id": 10,
+        "value": 100
+      },
+      "processed_at": "2026-06-20T14:20:39.423426",
+      "result": 200
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:20:39.323318",
+    "end_time": "2026-06-20T14:20:39.423620",
+    "retry_count": 0,
+    "duration_seconds": 0.100302,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000012",
+    "task_data": "{'id': 11, 'value': 110}",
+    "status": "completed",
+    "result": {
+      "input": {
+        "id": 11,
+        "value": 110
+      },
+      "processed_at": "2026-06-20T14:20:39.423521",
+      "result": 220
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:20:39.323420",
+    "end_time": "2026-06-20T14:20:39.423703",
+    "retry_count": 0,
+    "duration_seconds": 0.100283,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000013",
+    "task_data": "{'id': 12, 'value': 120}",
+    "status": "completed",
+    "result": {
+      "input": {
+        "id": 12,
+        "value": 120
+      },
+      "processed_at": "2026-06-20T14:20:39.523345",
+      "result": 240
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:20:39.423249",
+    "end_time": "2026-06-20T14:20:39.523538",
+    "retry_count": 0,
+    "duration_seconds": 0.100289,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000014",
+    "task_data": "{'id': 13, 'value': 130}",
+    "status": "completed",
+    "result": {
+      "input": {
+        "id": 13,
+        "value": 130
+      },
+      "processed_at": "2026-06-20T14:20:39.523604",
+      "result": 260
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:20:39.423377",
+    "end_time": "2026-06-20T14:20:39.523732",
+    "retry_count": 0,
+    "duration_seconds": 0.100355,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000015",
+    "task_data": "{'id': 14, 'value': 140}",
+    "status": "completed",
+    "result": {
+      "input": {
+        "id": 14,
+        "value": 140
+      },
+      "processed_at": "2026-06-20T14:20:39.523791",
+      "result": 280
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:20:39.423639",
+    "end_time": "2026-06-20T14:20:39.523886",
+    "retry_count": 0,
+    "duration_seconds": 0.100247,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000016",
+    "task_data": "{'id': 15, 'value': 150}",
+    "status": "completed",
+    "result": {
+      "input": {
+        "id": 15,
+        "value": 150
+      },
+      "processed_at": "2026-06-20T14:20:39.523925",
+      "result": 300
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:20:39.423718",
+    "end_time": "2026-06-20T14:20:39.524003",
+    "retry_count": 0,
+    "duration_seconds": 0.100285,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000017",
+    "task_data": "{'id': 16, 'value': 160}",
+    "status": "completed",
+    "result": {
+      "input": {
+        "id": 16,
+        "value": 160
+      },
+      "processed_at": "2026-06-20T14:20:39.623669",
+      "result": 320
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:20:39.523562",
+    "end_time": "2026-06-20T14:20:39.623936",
+    "retry_count": 0,
+    "duration_seconds": 0.100374,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000018",
+    "task_data": "{'id': 17, 'value': 170}",
+    "status": "completed",
+    "result": {
+      "input": {
+        "id": 17,
+        "value": 170
+      },
+      "processed_at": "2026-06-20T14:20:39.623984",
+      "result": 340
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:20:39.523749",
+    "end_time": "2026-06-20T14:20:39.624098",
+    "retry_count": 0,
+    "duration_seconds": 0.100349,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000020",
+    "task_data": "{'id': 19, 'value': 190}",
+    "status": "completed",
+    "result": {
+      "input": {
+        "id": 19,
+        "value": 190
+      },
+      "processed_at": "2026-06-20T14:20:39.624130",
+      "result": 380
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:20:39.524018",
+    "end_time": "2026-06-20T14:20:39.624260",
+    "retry_count": 0,
+    "duration_seconds": 0.100242,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000019",
+    "task_data": "{'id': 18, 'value': 180}",
+    "status": "completed",
+    "result": {
+      "input": {
+        "id": 18,
+        "value": 180
+      },
+      "processed_at": "2026-06-20T14:20:39.624311",
+      "result": 360
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:20:39.523902",
+    "end_time": "2026-06-20T14:20:39.624390",
+    "retry_count": 0,
+    "duration_seconds": 0.100488,
+    "metadata": {}
+  }
+]

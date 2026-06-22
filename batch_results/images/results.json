@@ -1,0 +1,342 @@
+[
+  {
+    "job_id": "job_000001",
+    "task_data": "{'id': 'img_0000', 'path': '/data/img_0000.jpg', 'size': 1920}",
+    "status": "completed",
+    "result": {
+      "id": "img_0000",
+      "original_size": 1920,
+      "resized_size": 480,
+      "processed_at": "2026-06-20T14:21:16.611491"
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:21:16.510923",
+    "end_time": "2026-06-20T14:21:16.612839",
+    "retry_count": 0,
+    "duration_seconds": 0.101916,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000002",
+    "task_data": "{'id': 'img_0001', 'path': '/data/img_0001.jpg', 'size': 2020}",
+    "status": "completed",
+    "result": {
+      "id": "img_0001",
+      "original_size": 2020,
+      "resized_size": 505,
+      "processed_at": "2026-06-20T14:21:16.613478"
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:21:16.511682",
+    "end_time": "2026-06-20T14:21:16.613684",
+    "retry_count": 0,
+    "duration_seconds": 0.102002,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000003",
+    "task_data": "{'id': 'img_0002', 'path': '/data/img_0002.jpg', 'size': 2120}",
+    "status": "completed",
+    "result": {
+      "id": "img_0002",
+      "original_size": 2120,
+      "resized_size": 530,
+      "processed_at": "2026-06-20T14:21:16.613747"
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:21:16.512961",
+    "end_time": "2026-06-20T14:21:16.613872",
+    "retry_count": 0,
+    "duration_seconds": 0.100911,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000004",
+    "task_data": "{'id': 'img_0003', 'path': '/data/img_0003.jpg', 'size': 2220}",
+    "status": "completed",
+    "result": {
+      "id": "img_0003",
+      "original_size": 2220,
+      "resized_size": 555,
+      "processed_at": "2026-06-20T14:21:16.616796"
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:21:16.514927",
+    "end_time": "2026-06-20T14:21:16.616953",
+    "retry_count": 0,
+    "duration_seconds": 0.102026,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000005",
+    "task_data": "{'id': 'img_0004', 'path': '/data/img_0004.jpg', 'size': 2320}",
+    "status": "completed",
+    "result": {
+      "id": "img_0004",
+      "original_size": 2320,
+      "resized_size": 580,
+      "processed_at": "2026-06-20T14:21:16.714249"
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:21:16.612886",
+    "end_time": "2026-06-20T14:21:16.714436",
+    "retry_count": 0,
+    "duration_seconds": 0.10155,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000007",
+    "task_data": "{'id': 'img_0006', 'path': '/data/img_0006.jpg', 'size': 2520}",
+    "status": "completed",
+    "result": {
+      "id": "img_0006",
+      "original_size": 2520,
+      "resized_size": 630,
+      "processed_at": "2026-06-20T14:21:16.714496"
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:21:16.613888",
+    "end_time": "2026-06-20T14:21:16.714588",
+    "retry_count": 0,
+    "duration_seconds": 0.1007,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000006",
+    "task_data": "{'id': 'img_0005', 'path': '/data/img_0005.jpg', 'size': 2420}",
+    "status": "completed",
+    "result": {
+      "id": "img_0005",
+      "original_size": 2420,
+      "resized_size": 605,
+      "processed_at": "2026-06-20T14:21:16.715794"
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:21:16.613713",
+    "end_time": "2026-06-20T14:21:16.715901",
+    "retry_count": 0,
+    "duration_seconds": 0.102188,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000008",
+    "task_data": "{'id': 'img_0007', 'path': '/data/img_0007.jpg', 'size': 2620}",
+    "status": "completed",
+    "result": {
+      "id": "img_0007",
+      "original_size": 2620,
+      "resized_size": 655,
+      "processed_at": "2026-06-20T14:21:16.717067"
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:21:16.616973",
+    "end_time": "2026-06-20T14:21:16.717176",
+    "retry_count": 0,
+    "duration_seconds": 0.100203,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000009",
+    "task_data": "{'id': 'img_0008', 'path': '/data/img_0008.jpg', 'size': 2720}",
+    "status": "completed",
+    "result": {
+      "id": "img_0008",
+      "original_size": 2720,
+      "resized_size": 680,
+      "processed_at": "2026-06-20T14:21:16.814567"
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:21:16.714462",
+    "end_time": "2026-06-20T14:21:16.816177",
+    "retry_count": 0,
+    "duration_seconds": 0.101715,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000010",
+    "task_data": "{'id': 'img_0009', 'path': '/data/img_0009.jpg', 'size': 2820}",
+    "status": "completed",
+    "result": {
+      "id": "img_0009",
+      "original_size": 2820,
+      "resized_size": 705,
+      "processed_at": "2026-06-20T14:21:16.820170"
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:21:16.714606",
+    "end_time": "2026-06-20T14:21:16.820363",
+    "retry_count": 0,
+    "duration_seconds": 0.105757,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000011",
+    "task_data": "{'id': 'img_0010', 'path': '/data/img_0010.jpg', 'size': 2920}",
+    "status": "completed",
+    "result": {
+      "id": "img_0010",
+      "original_size": 2920,
+      "resized_size": 730,
+      "processed_at": "2026-06-20T14:21:16.820427"
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:21:16.715918",
+    "end_time": "2026-06-20T14:21:16.820520",
+    "retry_count": 0,
+    "duration_seconds": 0.104602,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000012",
+    "task_data": "{'id': 'img_0011', 'path': '/data/img_0011.jpg', 'size': 3020}",
+    "status": "completed",
+    "result": {
+      "id": "img_0011",
+      "original_size": 3020,
+      "resized_size": 755,
+      "processed_at": "2026-06-20T14:21:16.820567"
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:21:16.717195",
+    "end_time": "2026-06-20T14:21:16.820658",
+    "retry_count": 0,
+    "duration_seconds": 0.103463,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000014",
+    "task_data": "{'id': 'img_0013', 'path': '/data/img_0013.jpg', 'size': 3220}",
+    "status": "completed",
+    "result": {
+      "id": "img_0013",
+      "original_size": 3220,
+      "resized_size": 805,
+      "processed_at": "2026-06-20T14:21:16.920492"
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:21:16.820390",
+    "end_time": "2026-06-20T14:21:16.921708",
+    "retry_count": 0,
+    "duration_seconds": 0.101318,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000016",
+    "task_data": "{'id': 'img_0015', 'path': '/data/img_0015.jpg', 'size': 3420}",
+    "status": "completed",
+    "result": {
+      "id": "img_0015",
+      "original_size": 3420,
+      "resized_size": 855,
+      "processed_at": "2026-06-20T14:21:16.920786"
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:21:16.820675",
+    "end_time": "2026-06-20T14:21:16.921820",
+    "retry_count": 0,
+    "duration_seconds": 0.101145,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000015",
+    "task_data": "{'id': 'img_0014', 'path': '/data/img_0014.jpg', 'size': 3320}",
+    "status": "completed",
+    "result": {
+      "id": "img_0014",
+      "original_size": 3320,
+      "resized_size": 830,
+      "processed_at": "2026-06-20T14:21:16.921622"
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:21:16.820538",
+    "end_time": "2026-06-20T14:21:16.921896",
+    "retry_count": 0,
+    "duration_seconds": 0.101358,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000013",
+    "task_data": "{'id': 'img_0012', 'path': '/data/img_0012.jpg', 'size': 3120}",
+    "status": "completed",
+    "result": {
+      "id": "img_0012",
+      "original_size": 3120,
+      "resized_size": 780,
+      "processed_at": "2026-06-20T14:21:16.922528"
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:21:16.816211",
+    "end_time": "2026-06-20T14:21:16.922661",
+    "retry_count": 0,
+    "duration_seconds": 0.10645,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000019",
+    "task_data": "{'id': 'img_0018', 'path': '/data/img_0018.jpg', 'size': 3720}",
+    "status": "completed",
+    "result": {
+      "id": "img_0018",
+      "original_size": 3720,
+      "resized_size": 930,
+      "processed_at": "2026-06-20T14:21:17.022010"
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:21:16.921913",
+    "end_time": "2026-06-20T14:21:17.022210",
+    "retry_count": 0,
+    "duration_seconds": 0.100297,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000020",
+    "task_data": "{'id': 'img_0019', 'path': '/data/img_0019.jpg', 'size': 3820}",
+    "status": "completed",
+    "result": {
+      "id": "img_0019",
+      "original_size": 3820,
+      "resized_size": 955,
+      "processed_at": "2026-06-20T14:21:17.022813"
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:21:16.922728",
+    "end_time": "2026-06-20T14:21:17.022994",
+    "retry_count": 0,
+    "duration_seconds": 0.100266,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000018",
+    "task_data": "{'id': 'img_0017', 'path': '/data/img_0017.jpg', 'size': 3620}",
+    "status": "completed",
+    "result": {
+      "id": "img_0017",
+      "original_size": 3620,
+      "resized_size": 905,
+      "processed_at": "2026-06-20T14:21:17.024925"
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:21:16.921836",
+    "end_time": "2026-06-20T14:21:17.025095",
+    "retry_count": 0,
+    "duration_seconds": 0.103259,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000017",
+    "task_data": "{'id': 'img_0016', 'path': '/data/img_0016.jpg', 'size': 3520}",
+    "status": "completed",
+    "result": {
+      "id": "img_0016",
+      "original_size": 3520,
+      "resized_size": 880,
+      "processed_at": "2026-06-20T14:21:17.025132"
+    },
+    "error": null,
+    "start_time": "2026-06-20T14:21:16.921730",
+    "end_time": "2026-06-20T14:21:17.025228",
+    "retry_count": 0,
+    "duration_seconds": 0.103498,
+    "metadata": {}
+  }
+]

@@ -1,0 +1,348 @@
+================================================================================
+                    ENHANCED RISKRULESDB v2.0.0
+                    QUICK REFERENCE CARD
+================================================================================
+
+SERVER: RiskRulesDB-Enhanced (FastMCP)
+STATUS: Production Ready
+FEATURES: 5 Advanced + Comprehensive Analysis Tool
+
+================================================================================
+FEATURE 1: CONFIGURABLE RISK THRESHOLDS API (3 tools)
+================================================================================
+
+configure_risk_threshold()
+  ├─ Update existing metric thresholds
+  ├─ Parameters: metric, low, moderate, high, critical
+  └─ Use: Adapt to policy/regulatory changes
+
+add_custom_risk_threshold()
+  ├─ Create new metric thresholds
+  ├─ Parameters: metric, name, thresholds, unit, description
+  └─ Use: Track new risk factors
+
+get_all_risk_thresholds()
+  ├─ View all configured thresholds
+  ├─ Returns: All metrics with current values
+  └─ Use: Audit and review configuration
+
+================================================================================
+FEATURE 2: HISTORICAL RISK TRENDING (4 tools)
+================================================================================
+
+record_risk_assessment()
+  ├─ Store assessment in time-series database
+  ├─ Parameters: entity_id, risk_score, risk_level, metrics...
+  └─ Use: Create audit trail and trend history
+
+get_risk_history()
+  ├─ Retrieve historical assessments
+  ├─ Parameters: entity_id, limit
+  └─ Use: View past decisions
+
+calculate_risk_trend()
+  ├─ Analyze trend direction over time
+  ├─ Parameters: entity_id, period_days
+  └─ Returns: Direction (improving/stable/deteriorating), statistics
+
+get_cohort_statistics()
+  ├─ Compare groups by risk level
+  ├─ Parameters: risk_level, period_days
+  └─ Returns: Mean, median, min, max, stdev
+
+================================================================================
+FEATURE 3: ANOMALY DETECTION WITH ML (1 tool + 4 methods)
+================================================================================
+
+detect_financial_anomalies()
+  ├─ Run ML ensemble detection
+  ├─ Methods: Z-score, Isolation Forest, Spending Pattern, Velocity
+  ├─ Parameters: entity_id, dti_ratio, credit_score, loan_amount, income, spending_pattern
+  └─ Returns: Anomalies, risk_score, recommendations, confidence
+
+Anomaly Types:
+  ├─ SPENDING_SPIKE          (unusual spending increase)
+  ├─ UNUSUAL_PATTERN         (deviation from behavior)
+  ├─ HIGH_VELOCITY           (rapid transactions)
+  ├─ ACCOUNT_AGE             (new account behavior)
+  ├─ GEOGRAPHIC_ANOMALY      (unusual location)
+  └─ INCOME_VARIANCE         (income changes)
+
+================================================================================
+FEATURE 4: REGULATORY RULE VERSIONING (3 tools)
+================================================================================
+
+get_active_regulatory_rules()
+  ├─ View all active compliance rules
+  ├─ Default: ECOA, FCRA, GLBA
+  └─ Returns: Rules organized by type with versions
+
+create_regulatory_rule_version()
+  ├─ Create new rule version
+  ├─ Parameters: rule_id, name, type, version, content
+  └─ Use: Update compliance rules with audit trail
+
+validate_compliance()
+  ├─ Check entity against regulatory rules
+  ├─ Parameters: entity_data, rule_types
+  └─ Returns: compliant (true/false), violations list
+
+================================================================================
+FEATURE 5: CUSTOM RULE ENGINE (4 tools)
+================================================================================
+
+create_custom_threshold_rule()
+  ├─ Create simple threshold rule
+  ├─ Parameters: rule_id, name, metric, threshold, operator
+  └─ Example: "dti_ratio < 0.43"
+
+create_custom_complex_rule()
+  ├─ Create multi-condition rule
+  ├─ Parameters: rule_id, name, conditions[], logic (AND/OR)
+  └─ Example: "(dti > 0.50) AND (credit < 600)"
+
+evaluate_custom_rules()
+  ├─ Run custom rules against data
+  ├─ Parameters: data, rule_ids (optional)
+  └─ Returns: Pass/fail results, compliance_score
+
+get_custom_rules()
+  ├─ List all registered custom rules
+  └─ Returns: All rules with priority and status
+
+================================================================================
+COMPREHENSIVE ANALYSIS TOOL (1 tool)
+================================================================================
+
+comprehensive_risk_analysis()
+  ├─ Orchestrates all 5 features in one call
+  ├─ Parameters: entity_id, dti_ratio, credit_score, loan_amount,
+  │              monthly_income, spending_pattern
+  └─ Returns: Complete analysis with final recommendation
+
+  Analysis Steps:
+    1. Threshold evaluation
+    2. Historical trend analysis
+    3. ML anomaly detection
+    4. Regulatory compliance check
+    5. Custom rule evaluation
+    6. Final recommendation
+
+================================================================================
+COMMON WORKFLOWS
+================================================================================
+
+WORKFLOW 1: Initial Risk Assessment
+  1. configure_risk_threshold() - Set policy
+  2. comprehensive_risk_analysis() - Analyze applicant
+  3. Result: Approve/Deny/Conditional
+
+WORKFLOW 2: Portfolio Monitoring
+  1. record_risk_assessment() - Log after each decision
+  2. get_cohort_statistics() - Daily portfolio analysis
+  3. calculate_risk_trend() - Monitor high-risk segment
+  4. Result: Early warnings, interventions
+
+WORKFLOW 3: New Policy Rollout
+  1. create_custom_complex_rule() - Define new rules
+  2. evaluate_custom_rules() - A/B test on subset
+  3. create_regulatory_rule_version() - Version control
+  4. calculate_risk_trend() - Measure impact
+  5. Result: Data-driven rollout
+
+WORKFLOW 4: Fraud Investigation
+  1. detect_financial_anomalies() - Flag suspicious
+  2. get_risk_history() - Historical patterns
+  3. validate_compliance() - Rule violations
+  4. Result: Investigation context
+
+WORKFLOW 5: Regulatory Audit
+  1. get_active_regulatory_rules() - Current rules
+  2. validate_compliance() - Sample validation
+  3. create_regulatory_rule_version() - Document changes
+  4. get_risk_history() - Audit trail
+  5. Result: Compliance documentation
+
+================================================================================
+KEY PARAMETERS & VALUES
+================================================================================
+
+Risk Levels:
+  - "low"       (score 0.0-0.25)
+  - "moderate"  (score 0.25-0.50)
+  - "high"      (score 0.50-0.75)
+  - "critical"  (score 0.75-1.0)
+
+Operators (for custom rules):
+  - ">"  (greater than)
+  - "<"  (less than)
+  - ">=" (greater or equal)
+  - "<=" (less or equal)
+  - "==" (equals)
+
+Logic (for complex rules):
+  - "AND" (all conditions must be true)
+  - "OR"  (any condition can be true)
+
+Default Thresholds:
+  - DTI:        0.36 (moderate), 0.50 (high), 0.75 (critical)
+  - Credit:     670 (moderate), 580 (high), 300 (critical)
+  - LTI:        2.5 (moderate), 3.5 (high), 4.5 (critical)
+  - Income:     $50k (moderate), $30k (high), $15k (critical)
+
+ML Confidence Range:
+  - Min: 0.50 (low confidence)
+  - Max: 0.95 (high confidence)
+
+================================================================================
+DATA STRUCTURES
+================================================================================
+
+RiskDataPoint:
+  {
+    timestamp: "2025-01-15T10:30:00",
+    entity_id: "applicant_12345",
+    risk_score: 0.42,
+    risk_level: "moderate",
+    dti_ratio: 0.38,
+    credit_score: 690,
+    loan_amount: 150000,
+    monthly_income: 5000,
+    anomaly_count: 1,
+    notes: "Optional notes"
+  }
+
+AnomalyDetectionResult:
+  {
+    anomalies: [...],
+    risk_score: 0.72,
+    summary: "Detected X anomalies...",
+    recommendations: [...],
+    ml_model: "ensemble_iso_forest_zscore",
+    confidence: 0.92
+  }
+
+ComprehensiveAnalysisResult:
+  {
+    status: "success",
+    entity_id: "applicant_98765",
+    analyses: {
+      threshold_evaluation: {...},
+      anomaly_detection: {...},
+      historical_trend: {...},
+      regulatory_compliance: {...},
+      custom_rules: {...}
+    },
+    final_assessment: {
+      overall_risk_score: 0.38,
+      overall_risk_level: "moderate",
+      final_recommendation: "APPROVE WITH MONITORING"
+    }
+  }
+
+================================================================================
+PERFORMANCE CHARACTERISTICS
+================================================================================
+
+Threshold Lookup:        O(1)
+History Query:           O(n)  where n = history records
+Anomaly Detection:       O(n)  where n = historical data points
+Custom Rule Evaluation:  O(m)  where m = number of rules
+Batch Processing:        O(b*k) where b = batch size, k = analysis per item
+
+Default Storage Limits:
+  - Max history points: 1000
+  - Retention: 730 days
+  - Max batch size: 100
+
+================================================================================
+SECURITY CHECKLIST
+================================================================================
+
+☐ Input validation enabled
+☐ Parameter bounds checking
+☐ Error handling implemented
+☐ Audit logging active
+☐ ECOA/FCRA compliance validated
+☐ Run in isolated environment
+☐ Authentication at client level
+☐ HTTPS for all communications
+☐ Encrypt data at rest
+☐ Regular security audits
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+No history found?
+  └─ Check entity_id matches, ensure record_risk_assessment called first
+
+Threshold not updating?
+  └─ Verify metric name, use get_all_risk_thresholds to see valid names
+
+Anomaly score unexpected?
+  └─ Check input data ranges, verify spending_pattern format
+
+Compliance violation?
+  └─ Review rule content, validate entity_data structure
+
+Custom rule not triggering?
+  └─ Check rule_id is registered, verify operator syntax
+
+================================================================================
+DEPLOYMENT
+================================================================================
+
+Install:
+  pip install fastmcp
+
+Run Server:
+  python riskrulesdb_enhanced_server.py
+
+Test:
+  python test_enhanced_riskrulesdb.py
+
+MCP Client Config:
+  {
+    "mcpServers": {
+      "riskrulesdb": {
+        "command": "python",
+        "args": ["/path/to/riskrulesdb_enhanced_server.py"]
+      }
+    }
+  }
+
+================================================================================
+HELP & DOCUMENTATION
+================================================================================
+
+Get Server Info:
+  get_server_info() - Lists all tools and capabilities
+
+Tool Documentation:
+  Each tool has comprehensive docstring with examples
+
+Feature Guide:
+  ENHANCED_RISKRULESDB_GUIDE.md - Complete documentation
+
+Examples:
+  test_enhanced_riskrulesdb.py - Feature demonstrations
+
+Configuration:
+  riskrulesdb_enhanced_config.json - Configuration reference
+
+================================================================================
+VERSION INFO
+================================================================================
+
+Version:         2.0.0
+Status:          Production Ready
+Framework:       FastMCP
+Language:        Python 3.9+
+Features:        5 Advanced + 1 Comprehensive
+Tools:           15 total
+ML Approach:     Simulated (Ready for real integration)
+
+================================================================================
+                            END OF QUICK REFERENCE
+================================================================================

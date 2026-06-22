@@ -1,0 +1,38 @@
+[
+  {
+    "job_id": "job_000001",
+    "task_data": "{'id': 0, 'value': None}",
+    "status": "failed",
+    "result": null,
+    "error": "Traceback (most recent call last):\n  File \"/home/ubuntu/Desktop/demo/batch_processor.py\", line 384, in _execute_job\n    job.result = func(job.task_data)\n                 ^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/Desktop/demo/batch_examples.py\", line 375, in process_with_errors\n    raise ValueError(\"Invalid value: None\")\nValueError: Invalid value: None\n",
+    "start_time": "2026-06-20T14:21:37.821021",
+    "end_time": "2026-06-20T14:21:37.821662",
+    "retry_count": 0,
+    "duration_seconds": 0.000641,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000011",
+    "task_data": "{'id': 10, 'value': None}",
+    "status": "failed",
+    "result": null,
+    "error": "Traceback (most recent call last):\n  File \"/home/ubuntu/Desktop/demo/batch_processor.py\", line 384, in _execute_job\n    job.result = func(job.task_data)\n                 ^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/Desktop/demo/batch_examples.py\", line 375, in process_with_errors\n    raise ValueError(\"Invalid value: None\")\nValueError: Invalid value: None\n",
+    "start_time": "2026-06-20T14:21:37.822981",
+    "end_time": "2026-06-20T14:21:37.823649",
+    "retry_count": 0,
+    "duration_seconds": 0.000668,
+    "metadata": {}
+  },
+  {
+    "job_id": "job_000021",
+    "task_data": "{'id': 20, 'value': None}",
+    "status": "failed",
+    "result": null,
+    "error": "Traceback (most recent call last):\n  File \"/home/ubuntu/Desktop/demo/batch_processor.py\", line 384, in _execute_job\n    job.result = func(job.task_data)\n                 ^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/Desktop/demo/batch_examples.py\", line 375, in process_with_errors\n    raise ValueError(\"Invalid value: None\")\nValueError: Invalid value: None\n",
+    "start_time": "2026-06-20T14:21:37.825150",
+    "end_time": "2026-06-20T14:21:37.825991",
+    "retry_count": 0,
+    "duration_seconds": 0.000841,
+    "metadata": {}
+  }
+]

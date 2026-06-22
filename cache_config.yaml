@@ -1,0 +1,217 @@
+# Production Cache Configuration Template
+# This file configures the caching layer for API endpoints
+
+# Default cache settings
+default:
+  ttl: 300  # Default TTL in seconds (5 minutes)
+  backend: redis  # primary backend: redis or memory
+  warming_enabled: true
+  warming_interval: 300  # Background warming interval in seconds
+
+# Redis configuration
+redis:
+  enabled: true
+  host: ${REDIS_HOST:-localhost}
+  port: ${REDIS_PORT:-6379}
+  db: ${REDIS_DB:-0}
+  password: ${REDIS_PASSWORD:-null}
+  connection_timeout: 5  # seconds
+  socket_keepalive: true
+  pool:
+    min_connections: 5
+    max_connections: 20
+    socket_connect_timeout: 5
+    socket_keepalive: true
+
+# Fallback in-memory cache configuration
+memory:
+  enabled: true  # Always enabled as fallback
+  max_size: 1000  # Maximum number of entries
+  eviction_policy: lru  # Least Recently Used
+
+# Per-endpoint cache configuration
+endpoints:
+
+  # User endpoints
+  /api/users:
+    ttl: 600  # 10 minutes
+    warming: true
+    warming_interval: 300
+
+  /api/users/{id}:
+    ttl: 600
+    warming: false
+    invalidate_on:
+      - /api/users:update
+
+  /api/users/search:
+    ttl: 300  # 5 minutes
+    warming: false
+
+  # Post endpoints
+  /api/posts:
+    ttl: 300  # 5 minutes
+    warming: true
+    warming_interval: 300
+    invalidate_on:
+      - /api/posts:create
+      - /api/posts:update
+
+  /api/posts/{id}:
+    ttl: 300
+    warming: false
+    invalidate_on:
+      - /api/posts:update
+
+  /api/posts/trending:
+    ttl: 180  # 3 minutes (trending data changes frequently)
+    warming: true
+    warming_interval: 180
+
+  # Analytics endpoints
+  /api/analytics:
+    ttl: 3600  # 1 hour (expensive computation)
+    warming: true
+    warming_interval: 3600
+
+  /api/analytics/daily:
+    ttl: 86400  # 24 hours
+    warming: true
+    warming_interval: 86400
+
+  # Search endpoints
+  /api/search:
+    ttl: 300  # 5 minutes
+    warming: false
+
+  # Authentication endpoints
+  /api/auth/token:
+    ttl: 1800  # 30 minutes (short TTL for security)
+    warming: false
+
+  # Recommendations
+  /api/recommendations:
+    ttl: 3600  # 1 hour
+    warming: true
+    warming_interval: 1800  # Warm every 30 minutes
+
+# Invalidation patterns
+invalidation:
+  # When user is updated, invalidate user-related caches
+  /api/users:update:
+    - /api/users:*
+    - /api/users/*
+    - /api/recommendations:*
+
+  # When post is created/updated, invalidate post caches
+  /api/posts:create:
+    - /api/posts:*
+    - /api/posts/trending:*
+    - /api/analytics:*
+
+  /api/posts:update:
+    - /api/posts:*
+    - /api/posts/trending:*
+
+# Monitoring and metrics
+monitoring:
+  enabled: true
+  metrics_endpoint: /cache/metrics
+  stats_endpoint: /cache/stats
+  health_endpoint: /cache/health
+
+  # Alert thresholds
+  alerts:
+    low_hit_rate_threshold: 0.5  # Alert if hit rate < 50%
+    high_eviction_rate_threshold: 0.05  # Alert if eviction rate > 5%
+    redis_connection_loss: true  # Alert on Redis connection loss
+    cache_error_rate_threshold: 0.01  # Alert if error rate > 1%
+
+# Warming strategies
+warming:
+  strategies:
+    # Warm popular users
+    popular_users:
+      endpoint: /api/users
+      interval: 300
+      batch_size: 100
+      query: "SELECT * FROM users WHERE popularity > 0.7 LIMIT 100"
+
+    # Warm trending posts
+    trending_posts:
+      endpoint: /api/posts/trending
+      interval: 300
+      batch_size: 50
+      query: "SELECT * FROM posts WHERE trending = true LIMIT 50"
+
+    # Warm analytics
+    analytics:
+      endpoint: /api/analytics
+      interval: 3600
+      batch_size: 1
+      query: "SELECT * FROM analytics WHERE date = CURRENT_DATE"
+
+# Performance tuning
+performance:
+  # Enable compression for large cached values
+  compression:
+    enabled: true
+    threshold_bytes: 1024  # Compress values > 1KB
+    algorithm: gzip
+
+  # Batch operations
+  batching:
+    enabled: true
+    batch_size: 100
+
+  # Async operations
+  async:
+    enabled: true
+    worker_threads: 4
+
+# Logging
+logging:
+  level: INFO  # DEBUG, INFO, WARNING, ERROR
+  cache_operations: true  # Log all cache operations
+  metrics: true  # Log metrics periodically
+  metrics_interval: 60  # seconds
+
+# Development settings
+development:
+  # Disable Redis, use memory only
+  disable_redis: false
+
+  # Shorter TTLs for testing
+  override_ttl: null  # null to use configured TTLs
+
+  # Disable warming
+  disable_warming: false
+
+  # Enable debug logging
+  debug: false
+
+# Environment-specific overrides
+environments:
+  development:
+    redis:
+      enabled: false
+    memory:
+      max_size: 100
+    default:
+      warming_enabled: false
+
+  staging:
+    redis:
+      db: 1
+    default:
+      ttl: 300
+
+  production:
+    redis:
+      db: 0
+    default:
+      ttl: 600
+    monitoring:
+      alerts:
+        low_hit_rate_threshold: 0.6
+        high_eviction_rate_threshold: 0.02

@@ -1,0 +1,109 @@
+{
+  "scenarios": [
+    {
+      "name": "Low Risk Application",
+      "description": "Application with low risk across all categories",
+      "params": {
+        "financial_risk": 10,
+        "operational_risk": 15,
+        "compliance_risk": 5,
+        "reputational_risk": 8,
+        "has_critical_issues": false,
+        "has_mitigating_factors": true,
+        "requires_escalation": false
+      }
+    },
+    {
+      "name": "Medium-High Risk with Mitigation",
+      "description": "Application with moderate risk but mitigating factors present",
+      "params": {
+        "financial_risk": 60,
+        "operational_risk": 55,
+        "compliance_risk": 50,
+        "reputational_risk": 45,
+        "has_critical_issues": false,
+        "has_mitigating_factors": true,
+        "requires_escalation": false
+      }
+    },
+    {
+      "name": "High Risk Application",
+      "description": "Application with high risk scores requiring expert review",
+      "params": {
+        "financial_risk": 75,
+        "operational_risk": 70,
+        "compliance_risk": 80,
+        "reputational_risk": 65,
+        "has_critical_issues": true,
+        "has_mitigating_factors": false,
+        "requires_escalation": true
+      }
+    },
+    {
+      "name": "Critical Issues - No Mitigation",
+      "description": "Application with critical unmitigable issues - should reject",
+      "params": {
+        "financial_risk": 90,
+        "operational_risk": 85,
+        "compliance_risk": 95,
+        "reputational_risk": 80,
+        "has_critical_issues": true,
+        "has_mitigating_factors": false,
+        "requires_escalation": false
+      }
+    },
+    {
+      "name": "Mixed Risk Profile",
+      "description": "Application with varied risk levels requiring careful evaluation",
+      "params": {
+        "financial_risk": 30,
+        "operational_risk": 70,
+        "compliance_risk": 45,
+        "reputational_risk": 25,
+        "has_critical_issues": false,
+        "has_mitigating_factors": true,
+        "requires_escalation": true
+      }
+    },
+    {
+      "name": "Critical Issues with Strong Mitigation",
+      "description": "Critical issues present but strong mitigating factors exist",
+      "params": {
+        "financial_risk": 65,
+        "operational_risk": 60,
+        "compliance_risk": 70,
+        "reputational_risk": 55,
+        "has_critical_issues": true,
+        "has_mitigating_factors": true,
+        "requires_escalation": false
+      }
+    },
+    {
+      "name": "Very Low Risk",
+      "description": "Minimal risk across all categories - should auto-approve",
+      "params": {
+        "financial_risk": 5,
+        "operational_risk": 5,
+        "compliance_risk": 8,
+        "reputational_risk": 3,
+        "has_critical_issues": false,
+        "has_mitigating_factors": false,
+        "requires_escalation": false
+      }
+    },
+    {
+      "name": "High Compliance Risk",
+      "description": "Application with elevated compliance risk despite other low factors",
+      "params": {
+        "financial_risk": 20,
+        "operational_risk": 25,
+        "compliance_risk": 85,
+        "reputational_risk": 30,
+        "has_critical_issues": true,
+        "has_mitigating_factors": false,
+        "requires_escalation": true
+      }
+    }
+  ],
+  "total_scenarios": 8
+}

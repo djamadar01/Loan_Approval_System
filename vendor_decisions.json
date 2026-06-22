@@ -1,0 +1,37 @@
+[
+  {
+    "vendor_id": "VENDOR001",
+    "company_name": "Acme Corp",
+    "decision": "Approve",
+    "risk_score": 13,
+    "confidence": 0.95,
+    "factors": [
+      "Risk score 13 within acceptable range",
+      "No critical issues identified"
+    ],
+    "explanation": "Decision: Approve\nOverall Risk Score: 13/100\nRisk Breakdown:\n  - Financial Risk: 15/100\n  - Operational Risk: 20/100\n  - Compliance Risk: 5/100\n  - Reputational Risk: 10/100\nStatus: Mitigating factors present\nDecision Factors:\n  - Risk score 13 within acceptable range\n  - No critical issues identified"
+  },
+  {
+    "vendor_id": "VENDOR002",
+    "company_name": "StartUp Inc",
+    "decision": "Review",
+    "risk_score": 53,
+    "confidence": 0.85,
+    "factors": [
+      "Risk score 53 in medium-high range (50-84)",
+      "Escalation required"
+    ],
+    "explanation": "Decision: Review\nOverall Risk Score: 53/100\nRisk Breakdown:\n  - Financial Risk: 50/100\n  - Operational Risk: 70/100\n  - Compliance Risk: 35/100\n  - Reputational Risk: 60/100\nStatus: Escalation required\nDecision Factors:\n  - Risk score 53 in medium-high range (50-84)\n  - Escalation required"
+  },
+  {
+    "vendor_id": "VENDOR003",
+    "company_name": "Risky Ltd",
+    "decision": "Reject",
+    "risk_score": 69,
+    "confidence": 0.9,
+    "factors": [
+      "Critical issues present without mitigation"
+    ],
+    "explanation": "Decision: Reject\nOverall Risk Score: 69/100\nRisk Breakdown:\n  - Financial Risk: 85/100\n  - Operational Risk: 70/100\n  - Compliance Risk: 50/100\n  - Reputational Risk: 60/100\nStatus: Critical issues identified\nStatus: Escalation required\nDecision Factors:\n  - Critical issues present without mitigation"
+  }
+]
